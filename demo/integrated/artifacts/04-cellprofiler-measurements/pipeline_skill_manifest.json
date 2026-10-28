@@ -1,0 +1,52 @@
+{
+  "implementation": "cellpaint_pipeline.workflows.profiling",
+  "generated_utc": "2026-10-28T11:31:50Z",
+  "skill": {
+    "key": "cp-extract-measurements",
+    "description": "Run the configured CellProfiler profiling pipeline and write the standard measurement tables.",
+    "category": "profiling",
+    "input_keys": [
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "Image.csv",
+      "Cells.csv",
+      "Cytoplasm.csv",
+      "Nuclei.csv",
+      "CellProfiler log"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.workflows.profiling",
+      "CellProfiler"
+    ],
+    "user_summary": "Use this skill when you want CellProfiler measurement tables from raw images.",
+    "agent_summary": "Choose this skill when the request is to run the profiling .cppipe and produce CellProfiler tables.",
+    "composes_with": [
+      "cp-build-single-cell-table"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\04-cellprofiler-measurements",
+  "primary_outputs": {
+    "image_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Image.csv",
+    "cells_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Cells.csv",
+    "cytoplasm_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Cytoplasm.csv",
+    "nuclei_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Nuclei.csv",
+    "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\profiling\\20261028T113116Z_profiling_run-official-cellprofiler.log"
+  },
+  "details": {
+    "label": "profiling_run-official-cellprofiler",
+    "command": [
+      "C:\\Users\\DELL\\miniconda3\\envs\\cellpainting-claw\\python.exe",
+      "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\scripts\\07_run_official_cellprofiler.py",
+      "--config",
+      "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\configs\\pipeline_config.json"
+    ],
+    "cwd": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend",
+    "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\profiling\\20261028T113116Z_profiling_run-official-cellprofiler.log",
+    "returncode": 0,
+    "mode": "cellprofiler"
+  },
+  "ok": true
+}

@@ -1,0 +1,139 @@
+{
+  "tree": ".",
+  "profile": "v3",
+  "sample": {
+    "path": "demo/embeddings/data/sample_inputs.npz",
+    "cells": 8
+  },
+  "ok": true,
+  "methods": {
+    "deepprofiler": {
+      "ok": true,
+      "shape": [
+        8,
+        672
+      ],
+      "output_dim": 672,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "official",
+      "weights_sha256": "",
+      "elapsed_s": 11.35
+    },
+    "ca_mae": {
+      "ok": true,
+      "shape": [
+        8,
+        384
+      ],
+      "output_dim": 384,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "official",
+      "weights_sha256": "",
+      "elapsed_s": 14.87
+    },
+    "cellclip": {
+      "ok": true,
+      "shape": [
+        8,
+        512
+      ],
+      "output_dim": 512,
+      "input_unit": "channel_embeddings",
+      "weights_provenance": "official",
+      "weights_sha256": "",
+      "elapsed_s": 4.63
+    },
+    "o2vae": {
+      "ok": true,
+      "shape": [
+        8,
+        512
+      ],
+      "output_dim": 512,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "official",
+      "weights_sha256": "",
+      "elapsed_s": 2.94
+    },
+    "unidino": {
+      "ok": true,
+      "shape": [
+        8,
+        1920
+      ],
+      "output_dim": 1920,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "surrogate",
+      "weights_sha256": "",
+      "elapsed_s": 0.67
+    },
+    "dinocells": {
+      "ok": true,
+      "shape": [
+        8,
+        384
+      ],
+      "output_dim": 384,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "surrogate",
+      "weights_sha256": "",
+      "elapsed_s": 0.23
+    },
+    "morphogenie": {
+      "ok": true,
+      "shape": [
+        8,
+        10
+      ],
+      "output_dim": 10,
+      "input_unit": "single_cell_crop",
+      "weights_provenance": "surrogate",
+      "weights_sha256": "",
+      "elapsed_s": 0.04
+    }
+  },
+  "benchmark": {
+    "methods": [
+      "ca_mae",
+      "cellclip",
+      "deepprofiler",
+      "dinocells",
+      "morphogenie",
+      "o2vae",
+      "unidino"
+    ],
+    "errors": {},
+    "shapes": {
+      "deepprofiler": [
+        8,
+        672
+      ],
+      "ca_mae": [
+        8,
+        384
+      ],
+      "cellclip": [
+        8,
+        512
+      ],
+      "o2vae": [
+        8,
+        512
+      ],
+      "unidino": [
+        8,
+        1920
+      ],
+      "dinocells": [
+        8,
+        384
+      ],
+      "morphogenie": [
+        8,
+        10
+      ]
+    },
+    "agreement": {},
+    "report": "demo/embeddings/benchmark/benchmark_report.json"
+  }
+}

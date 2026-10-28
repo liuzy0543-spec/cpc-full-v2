@@ -1,0 +1,48 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.bak
+*.bak.*
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+tmp_test*.txt
+cache/
+exports/
+outputs
+!demo/backend/profiling_backend/outputs/
+demo/backend/profiling_backend/outputs/*
+!demo/backend/profiling_backend/outputs/cellprofiler/
+demo/backend/profiling_backend/outputs/cellprofiler/*
+!demo/backend/profiling_backend/outputs/cellprofiler/Image.csv
+!demo/backend/profiling_backend/outputs/cellprofiler/Cells.csv
+!demo/backend/profiling_backend/outputs/cellprofiler/Nuclei.csv
+dist/
+demo/tmp_illum/
+integrations/openclaw/autodl/state/
+integrations/openclaw/autodl/provider.env
+integrations/openclaw/docker/.env
+integrations/nanobot/*.db
+integrations/nanobot/*.log
+docs/_build/
+
+# demo 的产物是刻意提交的（教学用），覆盖上面的运行时目录规则
+!demo/integrated/artifacts/**/outputs/
+!demo/integrated/artifacts/**/outputs/**
+!demo/**/exports/
+!demo/**/cache/
+
+# demo 里只保留 report.json 引用的那一条 DeepProfiler 日志
+# demo 只保留被 report.json 引用的日志（目录必须放行，文件名再逐个放行）
+# demo 只保留被 report.json 引用的三条日志
+!demo/workspace/outputs/
+!demo/workspace/outputs/logs/
+!demo/workspace/outputs/logs/profiling/
+!demo/workspace/outputs/logs/segmentation/
+!demo/workspace/outputs/logs/deepprofiler/
+demo/workspace/outputs/logs/profiling/*
+demo/workspace/outputs/logs/segmentation/*
+demo/workspace/outputs/logs/deepprofiler/*
+!demo/workspace/outputs/logs/profiling/20261028T113116Z_profiling_run-official-cellprofiler.log
+!demo/workspace/outputs/logs/segmentation/20261028T113156Z_segmentation_run-mask-export.log
+!demo/workspace/outputs/logs/deepprofiler/20261028T113246Z_deepprofiler_profile.log

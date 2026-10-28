@@ -1,0 +1,38 @@
+{
+  "implementation": "cellpaint_pipeline.segmentation_native",
+  "generated_utc": "2026-10-28T11:32:32Z",
+  "skill": {
+    "key": "cp-generate-segmentation-previews",
+    "description": "Render field-level RGB preview PNGs from the segmentation source channels.",
+    "category": "segmentation",
+    "input_keys": [
+      "workflow_root",
+      "output_dir",
+      "overwrite"
+    ],
+    "typical_outputs": [
+      "sample_previews_png/"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.segmentation_native",
+      "Pillow",
+      "numpy"
+    ],
+    "user_summary": "Use this skill when you want only segmentation preview PNGs from prepared inputs or a workflow root.",
+    "agent_summary": "Choose this skill when the request is explicitly for segmentation preview images.",
+    "composes_with": [],
+    "status": "advanced",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\13-seg-previews",
+  "primary_outputs": {
+    "sample_previews_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\13-seg-previews\\sample_previews_png"
+  },
+  "details": {
+    "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\13-seg-previews\\sample_previews_png",
+    "generated_count": 0,
+    "skipped_existing": 2,
+    "field_count": 2
+  },
+  "ok": true
+}

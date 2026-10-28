@@ -1,0 +1,37 @@
+{
+  "implementation": "cellpaint_pipeline.profiling_native",
+  "generated_utc": "2026-10-28T11:31:53Z",
+  "skill": {
+    "key": "cyto-aggregate-profiles",
+    "description": "Run the pycytominer path and return the aggregated classical profile table.",
+    "category": "profiling",
+    "input_keys": [
+      "single_cell_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "aggregated.parquet"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.profiling_native",
+      "pycytominer"
+    ],
+    "user_summary": "Use this skill when you want the aggregated pycytominer profile table.",
+    "agent_summary": "Choose this skill when the request is to aggregate single-cell measurements into classical profiles.",
+    "composes_with": [
+      "cyto-annotate-profiles"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\06-aggregate",
+  "primary_outputs": {
+    "aggregated_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\06-aggregate\\pycytominer\\aggregated.parquet"
+  },
+  "details": {
+    "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\06-aggregate\\pycytominer\\aggregated.parquet",
+    "row_count": 2,
+    "column_count": 1942
+  },
+  "ok": true
+}

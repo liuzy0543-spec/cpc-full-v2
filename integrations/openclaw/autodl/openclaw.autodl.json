@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.22",
+    "lastTouchedAt": "2026-03-23T23:59:00.000Z"
+  },
+  "logging": {
+    "level": "info"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "__REPO_ROOT__/integrations/openclaw/autodl/workspace",
+      "repoRoot": "__REPO_ROOT__",
+      "skipBootstrap": true,
+      "heartbeat": {
+        "every": "0m"
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "deny": [
+      "browser",
+      "canvas"
+    ],
+    "sessions": {
+      "visibility": "tree"
+    },
+    "elevated": {
+      "enabled": false
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "replace-at-runtime"
+    }
+  }
+}

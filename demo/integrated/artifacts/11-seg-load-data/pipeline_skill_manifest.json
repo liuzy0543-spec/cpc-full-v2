@@ -1,0 +1,38 @@
+{
+  "implementation": "cellpaint_pipeline.segmentation_native",
+  "generated_utc": "2026-10-28T11:31:56Z",
+  "skill": {
+    "key": "cp-prepare-segmentation-inputs",
+    "description": "Prepare the load-data table that the segmentation CellProfiler pipeline will use.",
+    "category": "segmentation",
+    "input_keys": [
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "load_data_for_segmentation.csv"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.segmentation_native"
+    ],
+    "user_summary": "Use this skill when you want the segmentation input table without running the full segmentation export yet.",
+    "agent_summary": "Choose this skill when the request is to prepare segmentation inputs before mask extraction.",
+    "composes_with": [
+      "cp-extract-segmentation-artifacts",
+      "cp-generate-segmentation-previews"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\11-seg-load-data",
+  "primary_outputs": {
+    "load_data_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\11-seg-load-data\\load_data_for_segmentation.csv"
+  },
+  "details": {
+    "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\11-seg-load-data\\load_data_for_segmentation.csv",
+    "row_count": 2,
+    "plate_count": 1,
+    "well_count": 2,
+    "site_count": 2
+  },
+  "ok": true
+}

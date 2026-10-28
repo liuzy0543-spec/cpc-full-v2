@@ -1,0 +1,66 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/CellProfiler/prokaryote/bioformats_package.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/CellProfiler/prokaryote/prokaryote-2.4.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+Times reported are CPU and Wall-clock times for each module
+Wed Oct 28 19:31:22 2026: Image # 1, module LoadData # 1: CPU_time = 1.36 secs, Wall_time = 1.46 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module CorrectIlluminationApply # 2: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 3: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 4: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 5: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 6: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 7: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 8: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 9: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module ImageMath # 10: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module CorrectIlluminationCalculate # 14: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module CorrectIlluminationApply # 15: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module IdentifyPrimaryObjects # 16: CPU_time = 0.05 secs, Wall_time = 0.05 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module IdentifySecondaryObjects # 17: CPU_time = 0.03 secs, Wall_time = 0.03 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module IdentifyTertiaryObjects # 18: CPU_time = 0.02 secs, Wall_time = 0.02 secs
+Wed Oct 28 19:31:23 2026: Image # 1, module MeasureColocalization # 19: CPU_time = 1.11 secs, Wall_time = 1.14 secs
+Wed Oct 28 19:31:25 2026: Image # 1, module MeasureGranularity # 20: CPU_time = 0.88 secs, Wall_time = 0.98 secs
+Wed Oct 28 19:31:26 2026: Image # 1, module MeasureObjectIntensity # 21: CPU_time = 0.80 secs, Wall_time = 0.84 secs
+Wed Oct 28 19:31:26 2026: Image # 1, module MeasureObjectNeighbors # 22: CPU_time = 0.02 secs, Wall_time = 0.02 secs
+Wed Oct 28 19:31:26 2026: Image # 1, module MeasureObjectNeighbors # 23: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:26 2026: Image # 1, module MeasureObjectNeighbors # 24: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:26 2026: Image # 1, module MeasureObjectIntensityDistribution # 25: CPU_time = 0.53 secs, Wall_time = 0.69 secs
+Wed Oct 28 19:31:27 2026: Image # 1, module MeasureObjectSizeShape # 26: CPU_time = 0.30 secs, Wall_time = 0.30 secs
+Wed Oct 28 19:31:27 2026: Image # 1, module MeasureTexture # 27: CPU_time = 7.28 secs, Wall_time = 7.58 secs
+Wed Oct 28 19:31:35 2026: Image # 1, module OverlayOutlines # 28: CPU_time = 0.02 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:35 2026: Image # 1, module OverlayOutlines # 29: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:35 2026: Image # 1, module SaveImages # 30: CPU_time = 0.05 secs, Wall_time = 0.05 secs
+Wed Oct 28 19:31:35 2026: Image # 1, module SaveImages # 31: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:35 2026: Image # 1, module ExportToSpreadsheet # 32: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:35 2026: Image # 2, module LoadData # 1: CPU_time = 0.55 secs, Wall_time = 0.49 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module CorrectIlluminationApply # 2: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 3: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 4: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 5: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 6: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 7: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 8: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 9: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module ImageMath # 10: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module CorrectIlluminationCalculate # 14: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module CorrectIlluminationApply # 15: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module IdentifyPrimaryObjects # 16: CPU_time = 0.02 secs, Wall_time = 0.02 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module IdentifySecondaryObjects # 17: CPU_time = 0.03 secs, Wall_time = 0.03 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module IdentifyTertiaryObjects # 18: CPU_time = 0.02 secs, Wall_time = 0.02 secs
+Wed Oct 28 19:31:36 2026: Image # 2, module MeasureColocalization # 19: CPU_time = 1.20 secs, Wall_time = 1.26 secs
+Wed Oct 28 19:31:37 2026: Image # 2, module MeasureGranularity # 20: CPU_time = 0.84 secs, Wall_time = 0.87 secs
+Wed Oct 28 19:31:38 2026: Image # 2, module MeasureObjectIntensity # 21: CPU_time = 0.67 secs, Wall_time = 0.68 secs
+Wed Oct 28 19:31:38 2026: Image # 2, module MeasureObjectNeighbors # 22: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:38 2026: Image # 2, module MeasureObjectNeighbors # 23: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:38 2026: Image # 2, module MeasureObjectNeighbors # 24: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:39 2026: Image # 2, module MeasureObjectIntensityDistribution # 25: CPU_time = 0.44 secs, Wall_time = 0.46 secs
+Wed Oct 28 19:31:39 2026: Image # 2, module MeasureObjectSizeShape # 26: CPU_time = 0.25 secs, Wall_time = 0.26 secs
+Wed Oct 28 19:31:39 2026: Image # 2, module MeasureTexture # 27: CPU_time = 7.11 secs, Wall_time = 7.46 secs
+Wed Oct 28 19:31:47 2026: Image # 2, module OverlayOutlines # 28: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:47 2026: Image # 2, module OverlayOutlines # 29: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Wed Oct 28 19:31:47 2026: Image # 2, module SaveImages # 30: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:47 2026: Image # 2, module SaveImages # 31: CPU_time = 0.02 secs, Wall_time = 0.01 secs
+Wed Oct 28 19:31:47 2026: Image # 2, module ExportToSpreadsheet # 32: CPU_time = 0.00 secs, Wall_time = 0.00 secs
+Starting CellProfiler 4.2.7
+[profiling_demo] running: C:\CellProfiler\cellprofiler.EXE -c -r -p D:\release\cellpainting-claw-v2\demo\backend\profiling_backend\cellprofiler\CPJUMP1_analysis_without_batchfile_406.cppipe -o D:\release\cellpainting-claw-v2\demo\backend\profiling_backend\outputs\cellprofiler -i D:\release\cellpainting-claw-v2 --data-file D:\release\cellpainting-claw-v2\demo\backend\profiling_backend\outputs\cellprofiler\load_data_with_illum.absolute.csv

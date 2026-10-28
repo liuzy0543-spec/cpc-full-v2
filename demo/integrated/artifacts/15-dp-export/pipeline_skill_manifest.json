@@ -1,0 +1,52 @@
+{
+  "implementation": "cellpaint_pipeline.adapters.deepprofiler",
+  "generated_utc": "2026-10-28T11:32:33Z",
+  "skill": {
+    "key": "dp-export-deep-feature-inputs",
+    "description": "Write the DeepProfiler field metadata and per-field nuclei location CSV files.",
+    "category": "deepprofiler",
+    "input_keys": [
+      "workflow_root",
+      "image_csv_path",
+      "nuclei_csv_path",
+      "load_data_csv_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "manifest.json",
+      "images/field_metadata.csv",
+      "locations/"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.adapters.deepprofiler"
+    ],
+    "user_summary": "Use this skill when you want the DeepProfiler export bundle without building the project yet.",
+    "agent_summary": "Choose this skill when the request is to stop at the DeepProfiler export stage.",
+    "composes_with": [
+      "dp-build-deep-feature-project"
+    ],
+    "status": "advanced",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export",
+  "primary_outputs": {
+    "export_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export",
+    "export_manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\manifest.json",
+    "field_metadata_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\images\\field_metadata.csv",
+    "locations_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\locations"
+  },
+  "details": {
+    "export_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\manifest.json",
+    "field_metadata_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\images\\field_metadata.csv",
+    "locations_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\locations",
+    "field_count": 2,
+    "location_file_count": 2,
+    "total_nuclei": 4,
+    "source_image_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Image.csv",
+    "source_nuclei_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Nuclei.csv",
+    "source_load_data_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+    "source_label": "workflow-local-mask-export"
+  },
+  "ok": true
+}

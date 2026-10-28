@@ -1,0 +1,25 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18789
+  },
+  "logging": {
+    "level": "info"
+  },
+  "env": {
+    "shellEnv": {
+      "enabled": true,
+      "timeoutMs": 15000
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "__REPO_ROOT__/integrations/openclaw/workspace",
+      "repoRoot": "__REPO_ROOT__",
+      "skipBootstrap": true,
+      "heartbeat": {
+        "every": "0m"
+      }
+    }
+  }
+}

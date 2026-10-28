@@ -1,0 +1,19 @@
+{
+  "implementation": "cellpaint_pipeline.data_access.gallery",
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\03-data-download\\downloads",
+  "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\03-data-download\\downloads\\download_manifest.json",
+  "bucket": "cellpainting-gallery",
+  "prefix": "cpg0016-jump/source_4/",
+  "matched_object_count": 2,
+  "downloaded_count": 2,
+  "skipped_existing_count": 0,
+  "dry_run": false,
+  "overwrite": false,
+  "max_files": 2,
+  "include_substrings": [],
+  "exclude_substrings": [],
+  "object_keys": [
+    "cpg0016-jump/source_4/images/2021_04_26_Batch1/illum/BR00117035/BR00117035_IllumAGP.npy",
+    "cpg0016-jump/source_4/images/2021_04_26_Batch1/illum/BR00117035/BR00117035_IllumBrightfield.npy"
+  ]
+}

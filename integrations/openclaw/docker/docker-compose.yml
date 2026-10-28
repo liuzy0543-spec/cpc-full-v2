@@ -1,0 +1,37 @@
+services:
+  cellpaint-openclaw:
+    build:
+      context: ../../..
+      dockerfile: integrations/openclaw/docker/Dockerfile
+    image: cellpaint-openclaw-runtime:latest
+    container_name: cellpaint-openclaw
+    environment:
+      OPENCLAW_BASE_URL: ${OPENCLAW_BASE_URL:-}
+      OPENCLAW_API_KEY: ${OPENCLAW_API_KEY:-}
+      OPENCLAW_PRIMARY_MODEL: ${OPENCLAW_PRIMARY_MODEL:-gpt-4o}
+      OPENCLAW_FALLBACK_MODEL: ${OPENCLAW_FALLBACK_MODEL:-}
+      OPENCLAW_PROVIDER_ID: ${OPENCLAW_PROVIDER_ID:-openai_compatible}
+      OPENCLAW_PROVIDER_API: ${OPENCLAW_PROVIDER_API:-openai-completions}
+      OPENCLAW_HOME: /workspace/state/openclaw
+      OPENCLAW_TEMPLATE_CONFIG_PATH: /opt/CellPainting-Claw/integrations/openclaw/docker/openclaw.container.json
+      OPENCLAW_RUNTIME_CONFIG_PATH: /workspace/state/openclaw/openclaw.runtime.json
+      CELLPAINT_CONFIG_PATH: /opt/CellPainting-Claw/integrations/openclaw/docker/project_config.docker.json
+      CELLPAINT_PIPELINE_ROOT: /workspace/pipeline
+    network_mode: host
+    volumes:
+      - ../../../../:/workspace/pipeline
+      - openclaw_state:/workspace/state
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    tmpfs:
+      - /tmp
+      - /run
+      - /var/tmp
+    stdin_open: true
+    tty: true
+    command: ["gateway"]
+
+volumes:
+  openclaw_state:

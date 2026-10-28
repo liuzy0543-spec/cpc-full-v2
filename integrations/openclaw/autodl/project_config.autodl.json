@@ -1,0 +1,62 @@
+{
+  "project_name": "cellpaint_post_mvp_wrapper_autodl",
+  "python_executable": "python",
+  "profiling_backend_root": "../../../demo/backend/profiling_backend",
+  "profiling_backend_config": "configs/pipeline_config.json",
+  "segmentation_backend_root": "../../../demo/backend/segmentation_backend",
+  "segmentation_backend_config": "configs/segmentation_config.json",
+  "workspace_root": "../../../demo/workspace",
+  "default_output_root": "../../../demo/workspace/outputs",
+  "deepprofiler_export_root": "../../../demo/workspace/exports/deepprofiler",
+  "mask_export_runtime": {
+    "num_shards": 24,
+    "max_workers": 12,
+    "threads_per_worker": 2
+  },
+  "deepprofiler_project_root": "../../../demo/workspace/exports/deepprofiler_project",
+  "deepprofiler_runtime": {
+    "experiment_name": "cell_painting_cnn",
+    "config_filename": "profile_config.json",
+    "metadata_filename": "index.csv",
+    "box_size": 128,
+    "mask_objects": false,
+    "batch_size": 64,
+    "feature_layer": "block6a_activation",
+    "model_name": "efficientnet",
+    "crop_generator": "crop_generator",
+    "use_pretrained_input_size": false,
+    "checkpoint": "Cell_Painting_CNN_v1.hdf5",
+    "deepprofiler_executable": "",
+    "conv_blocks": 0,
+    "learning_rate": 0.0001,
+    "label_smoothing": 0.0,
+    "validation_batch_size": 64,
+    "initialization": "random",
+    "checkpoint_url": "https://zenodo.org/records/7114558/files/Cell_Painting_CNN_v1.hdf5?download=1"
+  },
+  "data_access": {
+    "gallery_bucket": "cellpainting-gallery",
+    "gallery_region": "us-east-1",
+    "gallery_endpoint_url": "",
+    "use_unsigned": true,
+    "default_dataset_id": "cpg0016-jump",
+    "default_source_id": "source_4",
+    "data_cache_root": "../../../demo/workspace/cache/data",
+    "index_cache_root": "../../../demo/workspace/cache/index",
+    "preferred_packages": [
+      "boto3",
+      "cpgdata",
+      "quilt3"
+    ],
+    "quilt_registry": "s3://cellpainting-gallery",
+    "cpgdata_inventory_bucket": "cellpainting-gallery-inventory",
+    "cpgdata_index_prefix": "cellpainting-gallery/index",
+    "cpgdata_inventory_prefix": "cellpainting-gallery/whole_bucket/"
+  },
+  "cellprofiler": {
+    "profiling_template": "profiling-analysis",
+    "segmentation_template": "segmentation-base",
+    "custom_profiling_cppipe_path": null,
+    "custom_segmentation_cppipe_path": null
+  }
+}

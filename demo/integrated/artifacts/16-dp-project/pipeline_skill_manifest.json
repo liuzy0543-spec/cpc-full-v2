@@ -1,0 +1,62 @@
+{
+  "implementation": "cellpaint_pipeline.adapters.deepprofiler_project",
+  "generated_utc": "2026-10-28T11:32:33Z",
+  "skill": {
+    "key": "dp-build-deep-feature-project",
+    "description": "Build a runnable DeepProfiler project directory from a DeepProfiler export.",
+    "category": "deepprofiler",
+    "input_keys": [
+      "workflow_root",
+      "export_root",
+      "output_dir",
+      "experiment_name",
+      "config_filename",
+      "metadata_filename"
+    ],
+    "typical_outputs": [
+      "project_manifest.json",
+      "inputs/config/",
+      "inputs/metadata/",
+      "inputs/locations/"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.adapters.deepprofiler_project",
+      "DeepProfiler"
+    ],
+    "user_summary": "Use this skill when you want a runnable DeepProfiler project directory that is ready to execute next.",
+    "agent_summary": "Choose this skill when the request is to build the DeepProfiler project stage without running the model yet.",
+    "composes_with": [
+      "dp-run-deep-feature-model"
+    ],
+    "status": "advanced",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+  "primary_outputs": {
+    "project_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+    "project_manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\project_manifest.json",
+    "config_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\config\\profile_config.json",
+    "metadata_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\metadata\\index.csv",
+    "locations_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\locations"
+  },
+  "details": {
+    "project_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\project_manifest.json",
+    "config_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\config\\profile_config.json",
+    "metadata_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\metadata\\index.csv",
+    "locations_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\locations",
+    "field_count": 2,
+    "location_file_count": 2,
+    "image_width": 64,
+    "image_height": 64,
+    "image_bits": 16,
+    "image_format": "tiff",
+    "experiment_name": "cell_painting_cnn_demo",
+    "label_field": "Metadata_Well",
+    "control_value": "A01",
+    "export_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export",
+    "source_label": "workflow-local-mask-export",
+    "checkpoint_filename": "Cell_Painting_CNN_v1.hdf5"
+  },
+  "ok": true
+}

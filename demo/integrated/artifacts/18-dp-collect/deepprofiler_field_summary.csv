@@ -1,0 +1,3 @@
+Metadata_Plate,Metadata_Well,Metadata_Site,Metadata_DeepProfiler_Experiment,Metadata_DeepProfiler_FeatureFile,Metadata_DeepProfiler_CellCount,Metadata_DeepProfiler_FeatureCount
+BR00000001,A01,1,cell_painting_cnn_demo,D:\release\cellpainting-claw-v2\demo\integrated\artifacts\16-dp-project\outputs\cell_painting_cnn_demo\features\BR00000001\A01\1.npz,2,672
+BR00000001,A02,1,cell_painting_cnn_demo,D:\release\cellpainting-claw-v2\demo\integrated\artifacts\16-dp-project\outputs\cell_painting_cnn_demo\features\BR00000001\A02\1.npz,2,672

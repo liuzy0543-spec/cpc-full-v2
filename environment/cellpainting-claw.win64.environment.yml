@@ -1,0 +1,87 @@
+# Windows-adapted variant of environment/cellpainting-claw.environment.yml
+#
+# WHY THIS FILE EXISTS
+# --------------------
+# The shipped environment yml cannot be created on Windows. Verified via the
+# anaconda.org API on 2026-10-09 -- these pins have NO win-64 builds:
+#
+#   bioconda/cellprofiler        19 files -> linux-64:4, noarch:3, osx-64:3   (win-64: 0)
+#   bioconda/cellprofiler-core   13 files -> noarch:12                        (win-64: 0)
+#   bioconda/python-bioformats    6 files -> noarch:6                         (win-64: 0)
+#   conda-forge/python-javabridge 48 files -> linux-64:2, osx-64:2            (win-64: 0)
+#   conda-forge/cellprofiler     -> not published on conda-forge at all
+#
+# CellProfiler for Windows ships as a standalone frozen application, which is
+# what this project already invokes: the pipeline calls the CellProfiler CLI as
+# a subprocess (adapters/deepprofiler_project.py + runner.py), never as a
+# library import. So the conda env only needs the Python-side dependency set.
+#
+# DIFFERENCES FROM THE OFFICIAL YML
+# ---------------------------------
+# removed: cellprofiler=4.2.6, cellprofiler-core=4.2.6,
+#          python-bioformats=4.0.6, python-javabridge=4.0.3, openjdk=22.0.1
+# added  : none
+# changed:
+#   scikit-image  0.20.0 -> 0.22.0   (0.20.0 dies with a NATIVE crash on import
+#                                     here: exit 0xC0400003, no traceback.
+#                                     0.22.0 imports cleanly, same numpy 1.26 ABI.)
+#   deepprofiler  0.3.1  -> git tag v0.3.1 of broadinstitute/DeepProfiler.
+#                          0.3.1 is NOT on PyPI any more (only 0.5.1 is), so the
+#                          PyPI pin can never resolve. Install from tarball:
+#                          https://gh-proxy.com/https://github.com/broadinstitute/
+#                          DeepProfiler/archive/refs/tags/v0.3.1.tar.gz
+#                          sha256 d6d939c68a581fb3787ca95380270ef436f7217869ea43e57de52cf95951e528
+#                          (installed metadata self-reports 0.1.0 -- upstream never
+#                           bumped the internal version string.)
+#
+# TWO POST-INSTALL FIXES REQUIRED (not expressible in an env yml)
+# ---------------------------------------------------------------
+# 1. pycytominer==1.4.0 annotates with ``np.typing.ArrayLike`` but never imports
+#    ``numpy.typing``, so ``import pycytominer`` raises AttributeError on
+#    NumPy >= 1.25.  Fixed by shipping ``sitecustomize.py`` into site-packages
+#    that imports ``numpy.typing`` at interpreter start-up (covers subprocesses).
+# 2. pyarrow resolves to 20.0.0 (pulled by pycytominer/polars) instead of 16.1.0.
+#    Verified harmless for this pipeline.
+#
+# The CellProfiler runtime is pointed at by config and must be on an ASCII path
+# -- CellProfiler cannot handle non-ASCII paths.
+#
+#   C:\CellProfiler\CellProfiler.exe     (standalone, embedded Python 3.8)
+#
+# VERIFIED WORKING 2026-10-09: python 3.10.12, numpy 1.26.4, pandas 2.3.3,
+# pyarrow 20.0.0, sklearn 1.7.2, skimage 0.22.0, tifffile 2020.6.3, yaml 6.0.3,
+# matplotlib 3.10.1, PIL 10.3.0, scipy 1.11.4, tensorflow 2.10.1, deepprofiler,
+# pycytominer, boto3, fire, quilt3, cpgdata -- 18/18 imports OK, and
+# ``cellpaint_pipeline`` imports with all 83 lazy exports resolvable
+# (ProjectConfig / run_deepprofiler_pipeline / available_pipeline_skills).
+name: cellpainting-claw
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.12
+  - pip
+  - numpy=1.26.4
+  - pandas=2.3.3
+  - pyarrow=16.1.0
+  - scikit-learn=1.7.2
+  - scikit-image=0.22.0
+  - matplotlib-base=3.10.1
+  - pillow=10.3.0
+  - tifffile=2020.6.3
+  - pyyaml=6.0.3
+  - pytest
+  - pip:
+      # deepprofiler==0.3.1 is not on PyPI; see header. Install separately:
+      #   python -m pip install <DeepProfiler v0.3.1 tarball>
+      - pycytominer==1.4.0
+      - scipy==1.11.4
+      - quilt3
+      - cpgdata>=0.6.0
+      - botocore
+      - boto3
+      - sqlalchemy==2.0.48
+      - fire==0.7.1
+      - termcolor==3.3.0
+      - tensorflow==2.10.1
+      - tensorflow-addons==0.20.0

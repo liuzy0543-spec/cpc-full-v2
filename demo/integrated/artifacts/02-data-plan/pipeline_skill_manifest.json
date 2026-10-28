@@ -1,0 +1,79 @@
+{
+  "implementation": "cellpaint_pipeline.data_access",
+  "generated_utc": "2026-10-28T11:30:50Z",
+  "skill": {
+    "key": "data-plan-download",
+    "description": "Resolve one configured Cell Painting data request into a concrete download plan without executing the download.",
+    "category": "data-access",
+    "input_keys": [
+      "data_request",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "download_plan.json"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.data_access",
+      "boto3",
+      "cpgdata",
+      "quilt3"
+    ],
+    "user_summary": "Use this skill when you want a concrete download plan before fetching files.",
+    "agent_summary": "Choose this skill when the request is to preview or validate what a download would fetch without executing it.",
+    "composes_with": [
+      "data-download"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan",
+  "primary_outputs": {
+    "download_plan_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan\\download_plan.json"
+  },
+  "details": {
+    "implementation": "cellpaint_pipeline.data_access.planning",
+    "request": {
+      "mode": "gallery-source",
+      "dataset_id": "cpg0016-jump",
+      "source_id": "source_4",
+      "prefix": null,
+      "subprefix": "",
+      "bucket": null,
+      "include_substrings": [],
+      "exclude_substrings": [],
+      "max_files": null,
+      "overwrite": false,
+      "dry_run": false,
+      "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan\\downloads",
+      "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan\\downloads\\download_manifest.json"
+    },
+    "resolved_dataset_id": "cpg0016-jump",
+    "resolved_source_id": "source_4",
+    "resolved_prefix": "cpg0016-jump/source_4/",
+    "steps": [
+      {
+        "step_key": "download-1",
+        "adapter": "gallery",
+        "mode": "gallery-source",
+        "bucket": "cellpainting-gallery",
+        "prefix": "cpg0016-jump/source_4/",
+        "dataset_id": "cpg0016-jump",
+        "source_id": "source_4",
+        "subprefix": "",
+        "include_substrings": [],
+        "exclude_substrings": [],
+        "max_files": null,
+        "overwrite": false,
+        "dry_run": false,
+        "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan\\downloads",
+        "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\02-data-plan\\downloads\\download_manifest.json"
+      }
+    ],
+    "step_count": 1,
+    "notes": [],
+    "errors": [],
+    "summary_used": true,
+    "ok": true
+  },
+  "ok": true
+}

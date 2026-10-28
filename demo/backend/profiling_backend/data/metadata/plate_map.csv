@@ -1,0 +1,3 @@
+Metadata_Plate,Metadata_Well,Metadata_Treatment,Metadata_ControlType,Metadata_Batch
+BR00000001,A01,DEMO_A01,negative_control,demo_batch_01
+BR00000001,A02,DEMO_A02,negative_control,demo_batch_01

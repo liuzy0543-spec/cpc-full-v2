@@ -1,0 +1,246 @@
+{
+  "tree": ".",
+  "ok": true,
+  "passed": 19,
+  "total": 19,
+  "skills": {
+    "01": {
+      "ok": true,
+      "elapsed_s": 19.21,
+      "mode": null,
+      "outputs": {
+        "data_access_summary_path": "demo/integrated/artifacts/01-data-inspect/data_access_summary.json"
+      },
+      "error": null,
+      "skill": "data-inspect-availability"
+    },
+    "02": {
+      "ok": true,
+      "elapsed_s": 6.11,
+      "mode": null,
+      "outputs": {
+        "download_plan_path": "demo/integrated/artifacts/02-data-plan/download_plan.json"
+      },
+      "error": null,
+      "skill": "data-plan-download"
+    },
+    "03": {
+      "ok": true,
+      "elapsed_s": 25.92,
+      "mode": null,
+      "outputs": {
+        "download_plan_path": "demo/integrated/artifacts/03-data-download/download_plan.json",
+        "download_output_dir": "demo/integrated/artifacts/03-data-download/downloads",
+        "download_manifest_path": "demo/integrated/artifacts/03-data-download/downloads/download_manifest.json"
+      },
+      "error": null,
+      "skill": "data-download"
+    },
+    "04": {
+      "ok": true,
+      "elapsed_s": 34.8,
+      "mode": "cellprofiler",
+      "outputs": {
+        "image_table_path": "demo/backend/profiling_backend/outputs/cellprofiler/Image.csv",
+        "cells_table_path": "demo/backend/profiling_backend/outputs/cellprofiler/Cells.csv",
+        "cytoplasm_table_path": "demo/backend/profiling_backend/outputs/cellprofiler/Cytoplasm.csv",
+        "nuclei_table_path": "demo/backend/profiling_backend/outputs/cellprofiler/Nuclei.csv",
+        "log_path": "demo/workspace/outputs/logs/profiling/20261028T113116Z_profiling_run-official-cellprofiler.log"
+      },
+      "error": null,
+      "skill": "cp-extract-measurements"
+    },
+    "05": {
+      "ok": true,
+      "elapsed_s": 0.82,
+      "mode": "explicit",
+      "outputs": {
+        "single_cell_path": "demo/integrated/artifacts/05-single-cell-table/single_cell.csv.gz"
+      },
+      "error": null,
+      "skill": "cp-build-single-cell-table"
+    },
+    "06": {
+      "ok": true,
+      "elapsed_s": 1.66,
+      "mode": null,
+      "outputs": {
+        "aggregated_path": "demo/integrated/artifacts/06-aggregate/pycytominer/aggregated.parquet"
+      },
+      "error": null,
+      "skill": "cyto-aggregate-profiles"
+    },
+    "07": {
+      "ok": true,
+      "elapsed_s": 0.39,
+      "mode": null,
+      "outputs": {
+        "annotated_path": "demo/integrated/artifacts/07-annotate/pycytominer/annotated.parquet"
+      },
+      "error": null,
+      "skill": "cyto-annotate-profiles"
+    },
+    "08": {
+      "ok": true,
+      "elapsed_s": 0.76,
+      "mode": null,
+      "outputs": {
+        "normalized_path": "demo/integrated/artifacts/08-normalize/pycytominer/normalized.parquet"
+      },
+      "error": null,
+      "skill": "cyto-normalize-profiles"
+    },
+    "09": {
+      "ok": true,
+      "elapsed_s": 0.85,
+      "mode": null,
+      "outputs": {
+        "feature_selected_path": "demo/integrated/artifacts/09-feature-select/pycytominer/feature_selected.parquet"
+      },
+      "error": null,
+      "skill": "cyto-select-profile-features"
+    },
+    "10": {
+      "ok": true,
+      "elapsed_s": 1.15,
+      "mode": null,
+      "outputs": {
+        "summary_path": "demo/integrated/artifacts/10-classical-summary/profile_summary.json",
+        "well_metadata_summary_path": "demo/integrated/artifacts/10-classical-summary/well_metadata_summary.csv",
+        "top_variable_features_path": "demo/integrated/artifacts/10-classical-summary/top_variable_features.csv",
+        "pca_coordinates_path": "demo/integrated/artifacts/10-classical-summary/pca_coordinates.csv",
+        "pca_plot_path": "demo/integrated/artifacts/10-classical-summary/pca_plot.png"
+      },
+      "error": null,
+      "skill": "cyto-summarize-classical-profiles"
+    },
+    "11": {
+      "ok": true,
+      "elapsed_s": 0.07,
+      "mode": null,
+      "outputs": {
+        "load_data_path": "demo/integrated/artifacts/11-seg-load-data/load_data_for_segmentation.csv"
+      },
+      "error": null,
+      "skill": "cp-prepare-segmentation-inputs"
+    },
+    "12": {
+      "ok": true,
+      "elapsed_s": 35.58,
+      "mode": "cellprofiler",
+      "outputs": {
+        "load_data_path": "demo/integrated/artifacts/12-segmentation/load_data_for_segmentation.csv",
+        "pipeline_path": "demo/integrated/artifacts/12-segmentation/CPJUMP1_analysis_mask_export.cppipe",
+        "cellprofiler_output_dir": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks",
+        "image_table_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/Image.csv",
+        "cells_table_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/Cells.csv",
+        "cytoplasm_table_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/Cytoplasm.csv",
+        "nuclei_table_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/Nuclei.csv",
+        "experiment_table_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/Experiment.csv",
+        "labels_dir": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/labels",
+        "outlines_dir": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/outlines",
+        "illumination_runtime_dir": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/illumination_runtime",
+        "load_data_absolute_path": "demo/integrated/artifacts/12-segmentation/cellprofiler_masks/load_data_for_segmentation.absolute.csv",
+        "workflow_config_path": "demo/integrated/artifacts/12-segmentation/segmentation_workflow_config.json",
+        "summary_path": "demo/integrated/artifacts/12-segmentation/segmentation_summary.json",
+        "log_path": "demo/workspace/outputs/logs/segmentation/20261028T113156Z_segmentation_run-mask-export.log"
+      },
+      "error": null,
+      "skill": "cp-extract-segmentation-artifacts"
+    },
+    "13": {
+      "ok": true,
+      "elapsed_s": 0.01,
+      "mode": null,
+      "outputs": {
+        "sample_previews_dir": "demo/integrated/artifacts/13-seg-previews/sample_previews_png"
+      },
+      "error": null,
+      "skill": "cp-generate-segmentation-previews"
+    },
+    "14": {
+      "ok": true,
+      "elapsed_s": 1.05,
+      "mode": "masked",
+      "outputs": {
+        "crops_dir": "demo/integrated/artifacts/14-single-cell-crops/masked",
+        "image_stacks_dir": "demo/integrated/artifacts/14-single-cell-crops/masked/image_stacks",
+        "cell_masks_dir": "demo/integrated/artifacts/14-single-cell-crops/masked/cell_masks",
+        "nuclei_masks_dir": "demo/integrated/artifacts/14-single-cell-crops/masked/nuclei_masks",
+        "manifest_path": "demo/integrated/artifacts/14-single-cell-crops/masked/single_cell_manifest.csv",
+        "source_config_path": "demo/integrated/artifacts/14-single-cell-crops/segmentation_source_config.json"
+      },
+      "error": null,
+      "skill": "crop-export-single-cell-crops"
+    },
+    "15": {
+      "ok": true,
+      "elapsed_s": 0.02,
+      "mode": null,
+      "outputs": {
+        "export_root": "demo/integrated/artifacts/15-dp-export",
+        "export_manifest_path": "demo/integrated/artifacts/15-dp-export/manifest.json",
+        "field_metadata_path": "demo/integrated/artifacts/15-dp-export/images/field_metadata.csv",
+        "locations_root": "demo/integrated/artifacts/15-dp-export/locations"
+      },
+      "error": null,
+      "skill": "dp-export-deep-feature-inputs"
+    },
+    "16": {
+      "ok": true,
+      "elapsed_s": 0.04,
+      "mode": null,
+      "outputs": {
+        "project_root": "demo/integrated/artifacts/16-dp-project",
+        "project_manifest_path": "demo/integrated/artifacts/16-dp-project/project_manifest.json",
+        "config_path": "demo/integrated/artifacts/16-dp-project/inputs/config/profile_config.json",
+        "metadata_path": "demo/integrated/artifacts/16-dp-project/inputs/metadata/index.csv",
+        "locations_root": "demo/integrated/artifacts/16-dp-project/inputs/locations"
+      },
+      "error": null,
+      "skill": "dp-build-deep-feature-project"
+    },
+    "17": {
+      "ok": true,
+      "elapsed_s": 25.09,
+      "mode": null,
+      "outputs": {
+        "project_root": "demo/integrated/artifacts/16-dp-project",
+        "feature_dir": "demo/integrated/artifacts/16-dp-project/outputs/cell_painting_cnn_demo/features",
+        "checkpoint_dir": "demo/integrated/artifacts/16-dp-project/outputs/cell_painting_cnn_demo/checkpoint",
+        "log_path": "demo/workspace/outputs/logs/deepprofiler/20261028T113246Z_deepprofiler_profile.log"
+      },
+      "error": null,
+      "skill": "dp-run-deep-feature-model"
+    },
+    "18": {
+      "ok": true,
+      "elapsed_s": 0.19,
+      "mode": null,
+      "outputs": {
+        "single_cell_parquet_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_single_cell.parquet",
+        "single_cell_csv_gz_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_single_cell.csv.gz",
+        "well_aggregated_parquet_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_well_aggregated.parquet",
+        "well_aggregated_csv_gz_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_well_aggregated.csv.gz",
+        "field_summary_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_field_summary.csv",
+        "feature_manifest_path": "demo/integrated/artifacts/18-dp-collect/deepprofiler_feature_manifest.json"
+      },
+      "error": null,
+      "skill": "dp-collect-deep-features"
+    },
+    "19": {
+      "ok": true,
+      "elapsed_s": 0.36,
+      "mode": null,
+      "outputs": {
+        "summary_path": "demo/integrated/artifacts/19-dp-summary/profile_summary.json",
+        "well_metadata_summary_path": "demo/integrated/artifacts/19-dp-summary/well_metadata_summary.csv",
+        "top_variable_features_path": "demo/integrated/artifacts/19-dp-summary/top_variable_features.csv",
+        "pca_coordinates_path": "demo/integrated/artifacts/19-dp-summary/pca_coordinates.csv",
+        "pca_plot_path": "demo/integrated/artifacts/19-dp-summary/pca_plot.png"
+      },
+      "error": null,
+      "skill": "dp-summarize-deep-features"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "logging": {
+    "level": "info"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/workspace/state/openclaw/workspace",
+      "repoRoot": "/workspace/pipeline/CellPainting-Claw",
+      "skipBootstrap": true,
+      "heartbeat": {
+        "every": "0m"
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "deny": [
+      "browser",
+      "canvas"
+    ],
+    "sessions": {
+      "visibility": "tree"
+    },
+    "elevated": {
+      "enabled": false
+    }
+  }
+}

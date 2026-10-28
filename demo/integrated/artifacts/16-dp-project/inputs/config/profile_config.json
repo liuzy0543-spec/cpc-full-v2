@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "metadata": {
+      "label_field": "Metadata_Well",
+      "control_value": "A01",
+      "control_id": "A01",
+      "replicate_field": "Metadata_Well"
+    },
+    "images": {
+      "channels": [
+        "DNA",
+        "RNA",
+        "ER",
+        "AGP",
+        "Mito"
+      ],
+      "file_format": "tiff",
+      "bits": 16,
+      "width": 64,
+      "height": 64
+    },
+    "locations": {
+      "mode": "single_cells",
+      "box_size": 32,
+      "view_size": 32,
+      "mask_objects": false
+    }
+  },
+  "prepare": {
+    "compression": {
+      "implement": false,
+      "scaling_factor": 1.0
+    }
+  },
+  "profile": {
+    "feature_layer": "block6a_activation",
+    "checkpoint": "Cell_Painting_CNN_v1.hdf5",
+    "batch_size": 4
+  },
+  "train": {
+    "partition": {
+      "targets": [
+        "Metadata_Well"
+      ],
+      "split_field": "Metadata_Well",
+      "training": [],
+      "validation": []
+    },
+    "model": {
+      "name": "efficientnet",
+      "crop_generator": "crop_generator",
+      "augmentations": false,
+      "initialization": "random",
+      "params": {
+        "learning_rate": 0.0001,
+        "batch_size": 4,
+        "conv_blocks": 0,
+        "label_smoothing": 0.0
+      }
+    },
+    "sampling": {
+      "factor": 1.0,
+      "cache_size": 4,
+      "workers": 1,
+      "alpha": 0.2
+    },
+    "validation": {
+      "batch_size": 4,
+      "top_k": 1,
+      "sample_first_crops": false
+    }
+  }
+}

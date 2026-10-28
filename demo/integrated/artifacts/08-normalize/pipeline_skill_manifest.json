@@ -1,0 +1,37 @@
+{
+  "implementation": "cellpaint_pipeline.profiling_native",
+  "generated_utc": "2026-10-28T11:31:54Z",
+  "skill": {
+    "key": "cyto-normalize-profiles",
+    "description": "Run the pycytominer path and return the normalized classical profile table.",
+    "category": "profiling",
+    "input_keys": [
+      "annotated_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "normalized.parquet"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.profiling_native",
+      "pycytominer"
+    ],
+    "user_summary": "Use this skill when you want the normalized pycytominer profile table.",
+    "agent_summary": "Choose this skill when the request is to normalize classical profiles before feature selection.",
+    "composes_with": [
+      "cyto-select-profile-features"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\08-normalize",
+  "primary_outputs": {
+    "normalized_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\08-normalize\\pycytominer\\normalized.parquet"
+  },
+  "details": {
+    "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\08-normalize\\pycytominer\\normalized.parquet",
+    "row_count": 2,
+    "column_count": 1945
+  },
+  "ok": true
+}

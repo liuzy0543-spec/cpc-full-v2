@@ -1,0 +1,10 @@
+agents:
+  cellpaint_operator:
+    name: Cell Painting Operator
+    model: gpt-4.1
+    mcpServers:
+      - cellpaint-pipeline
+
+mcpServers:
+  cellpaint-pipeline:
+    url: http://127.0.0.1:8768/mcp

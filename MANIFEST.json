@@ -1,0 +1,57 @@
+{
+  "name": "cellpainting-claw-v2",
+  "release": "v2",
+  "description": "CellPainting-Claw 完全体：官方 19 个 skill + 训练/数据/配置/实验 + 统一 embedding 层",
+  "embedding_profile": "v3",
+  "embedding_label": "4 个官方权重方法 + 3 个替身方法",
+  "embedding_methods": [
+    "deepprofiler",
+    "ca_mae",
+    "cellclip",
+    "o2vae",
+    "unidino",
+    "dinocells",
+    "morphogenie"
+  ],
+  "skills": {
+    "count": 19,
+    "presets": 8
+  },
+  "verification": {
+    "command": "python verify_all.py",
+    "ok": true,
+    "skills": "19/19",
+    "embeddings": "7/7",
+    "benchmark_methods": 7,
+    "cellprofiler": "4.2.7 (C:\\CellProfiler\\CellProfiler.exe)",
+    "report": "verify/verify_report.json"
+  },
+  "entry_points": [
+    "cellpainting-claw",
+    "cellpainting-skills",
+    "cellpaint-pipeline"
+  ],
+  "file_count": 619,
+  "python_file_count": 221,
+  "size_mb": 22.5,
+  "docs": [
+    "RELEASE.md",
+    "docs/ABSOLUTE_PATHS.md",
+    "docs/CONFIGURATION.md",
+    "demo/README.md",
+    "demo/integrated/RUN.md",
+    "demo/embeddings/RUN.md"
+  ],
+  "demo": {
+    "integrated": {
+      "dir": "demo/integrated",
+      "skills_ok": "19/19",
+      "artifacts_mb": 8.3
+    },
+    "embeddings": {
+      "dir": "demo/embeddings",
+      "methods_ok": "7/7",
+      "benchmark_methods": 7
+    }
+  }
+}

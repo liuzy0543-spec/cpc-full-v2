@@ -1,0 +1,116 @@
+{
+  "implementation": "cellpaint_pipeline.workflows.segmentation",
+  "generated_utc": "2026-10-28T11:32:32Z",
+  "skill": {
+    "key": "cp-extract-segmentation-artifacts",
+    "description": "Run the segmentation CellProfiler pipeline and produce mask tables, labels, and outlines.",
+    "category": "segmentation",
+    "input_keys": [
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "load_data_for_segmentation.csv",
+      "CPJUMP1_analysis_mask_export.cppipe",
+      "cellprofiler_masks/",
+      "Image.csv",
+      "Cells.csv",
+      "Cytoplasm.csv",
+      "Nuclei.csv",
+      "Experiment.csv",
+      "labels/",
+      "outlines/",
+      "segmentation_summary.json",
+      "CellProfiler log"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.segmentation_native",
+      "cellpaint_pipeline.workflows.segmentation",
+      "CellProfiler"
+    ],
+    "user_summary": "Use this skill when you want segmentation outputs such as masks, labels, outlines, and object tables.",
+    "agent_summary": "Choose this skill when the request is to execute the segmentation branch and produce mask artifacts.",
+    "composes_with": [
+      "cp-generate-segmentation-previews",
+      "crop-export-single-cell-crops",
+      "dp-export-deep-feature-inputs"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation",
+  "primary_outputs": {
+    "load_data_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+    "pipeline_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\CPJUMP1_analysis_mask_export.cppipe",
+    "cellprofiler_output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks",
+    "image_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Image.csv",
+    "cells_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Cells.csv",
+    "cytoplasm_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Cytoplasm.csv",
+    "nuclei_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Nuclei.csv",
+    "experiment_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Experiment.csv",
+    "labels_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\labels",
+    "outlines_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\outlines",
+    "illumination_runtime_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\illumination_runtime",
+    "load_data_absolute_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\load_data_for_segmentation.absolute.csv",
+    "workflow_config_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\segmentation_workflow_config.json",
+    "summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\segmentation_summary.json",
+    "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\segmentation\\20261028T113156Z_segmentation_run-mask-export.log"
+  },
+  "details": {
+    "load_data": {
+      "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+      "row_count": 2,
+      "plate_count": 1,
+      "well_count": 2,
+      "site_count": 2
+    },
+    "pipeline": {
+      "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\CPJUMP1_analysis_mask_export.cppipe",
+      "module_count": 37,
+      "source_cppipe_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\cellprofiler\\CPJUMP1_analysis_without_batchfile_406.cppipe",
+      "selected_via": "template",
+      "execution_mode": "derive-mask-export"
+    },
+    "execution": {
+      "label": "segmentation_run-mask-export",
+      "command": [
+        "C:\\Users\\DELL\\miniconda3\\envs\\cellpainting-claw\\python.exe",
+        "D:\\release\\cellpainting-claw-v2\\demo\\backend\\segmentation_backend\\scripts\\03_run_mask_export.py",
+        "--config",
+        "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\segmentation_workflow_config.json",
+        "--reuse-load-data",
+        "--reuse-pipeline"
+      ],
+      "cwd": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\segmentation_backend",
+      "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\segmentation\\20261028T113156Z_segmentation_run-mask-export.log",
+      "returncode": 0
+    },
+    "export_mode": "cellprofiler",
+    "summary": {
+      "implementation": "cellpaint_pipeline.skills.cp-extract-segmentation-artifacts",
+      "load_data_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+      "pipeline_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\CPJUMP1_analysis_mask_export.cppipe",
+      "cellprofiler_output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks",
+      "image_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Image.csv",
+      "cells_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Cells.csv",
+      "nuclei_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Nuclei.csv",
+      "labels_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\labels",
+      "outlines_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\outlines",
+      "execution": {
+        "label": "segmentation_run-mask-export",
+        "command": [
+          "C:\\Users\\DELL\\miniconda3\\envs\\cellpainting-claw\\python.exe",
+          "D:\\release\\cellpainting-claw-v2\\demo\\backend\\segmentation_backend\\scripts\\03_run_mask_export.py",
+          "--config",
+          "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\segmentation_workflow_config.json",
+          "--reuse-load-data",
+          "--reuse-pipeline"
+        ],
+        "cwd": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\segmentation_backend",
+        "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\segmentation\\20261028T113156Z_segmentation_run-mask-export.log",
+        "returncode": 0
+      },
+      "export_mode": "cellprofiler"
+    }
+  },
+  "ok": true
+}

@@ -1,0 +1,60 @@
+{
+  "implementation": "cellpaint_pipeline.profile_summaries",
+  "generated_utc": "2026-10-28T11:32:58Z",
+  "skill": {
+    "key": "dp-summarize-deep-features",
+    "description": "Summarize DeepProfiler single-cell and well-level tables into readable metadata, variability, and PCA outputs.",
+    "category": "deepprofiler",
+    "input_keys": [
+      "single_cell_parquet_path",
+      "well_aggregated_parquet_path",
+      "manifest_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "profile_summary.json",
+      "well_metadata_summary.csv",
+      "top_variable_features.csv",
+      "pca_coordinates.csv",
+      "pca_plot.png"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.profile_summaries",
+      "pandas",
+      "numpy"
+    ],
+    "user_summary": "Use this skill when you want a readable summary of DeepProfiler outputs instead of raw embedding tables only.",
+    "agent_summary": "Choose this skill when the request is to explain or summarize DeepProfiler outputs for a human reader.",
+    "composes_with": [],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary",
+  "primary_outputs": {
+    "summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\profile_summary.json",
+    "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\well_metadata_summary.csv",
+    "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\top_variable_features.csv",
+    "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\pca_coordinates.csv",
+    "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\pca_plot.png"
+  },
+  "details": {
+    "single_cell_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.parquet",
+    "well_aggregated_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.parquet",
+    "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary",
+    "summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\profile_summary.json",
+    "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\well_metadata_summary.csv",
+    "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\top_variable_features.csv",
+    "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\pca_coordinates.csv",
+    "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\pca_plot.png",
+    "cell_count": 4,
+    "well_count": 2,
+    "feature_count": 672,
+    "metadata_column_count": 5,
+    "top_feature_count": 50,
+    "pca_explained_variance_ratio": [
+      1.0,
+      7.797302505331809e-33
+    ]
+  },
+  "ok": true
+}

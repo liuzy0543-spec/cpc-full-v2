@@ -1,0 +1,40 @@
+{
+  "project_name": "cellpainting_claw_demo_segmentation_backend",
+  "paths": {
+    "source_load_data_csv": "data/source_load_data.csv",
+    "load_data_csv": "data/load_data_for_segmentation.csv",
+    "base_pipeline": "../profiling_backend/cellprofiler/CPJUMP1_analysis_without_batchfile_406.cppipe",
+    "mask_export_pipeline": "cellprofiler/CPJUMP1_analysis_mask_export.cppipe",
+    "cellprofiler_output_dir": "outputs/cellprofiler_masks",
+    "sample_previews_dir": "outputs/sample_previews_png",
+    "masked_crops_dir": "outputs/single_cell_crops_masked",
+    "masked_manifest_csv": "outputs/single_cell_crops_masked/single_cell_manifest.csv",
+    "unmasked_crops_dir": "outputs/single_cell_crops_unmasked",
+    "unmasked_manifest_csv": "outputs/single_cell_crops_unmasked/single_cell_manifest.csv"
+  },
+  "subset": {
+    "plates": [
+      "BR00000001"
+    ],
+    "wells": [
+      "A01",
+      "A02"
+    ],
+    "sites": [
+      1
+    ]
+  },
+  "crop_extraction": {
+    "crop_size_pixels": 32,
+    "channel_order": [
+      "OrigMito",
+      "OrigAGP",
+      "OrigRNA",
+      "OrigER",
+      "OrigDNA",
+      "OrigBrightfield",
+      "OrigHighZBF",
+      "OrigLowZBF"
+    ]
+  }
+}

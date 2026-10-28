@@ -1,0 +1,35 @@
+{
+  "implementation": "cellpaint_pipeline.profile_summaries.deepprofiler",
+  "single_cell_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.parquet",
+  "well_aggregated_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.parquet",
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary",
+  "cell_count": 4,
+  "well_count": 2,
+  "feature_count": 672,
+  "metadata_column_count": 5,
+  "metadata_columns": [
+    "Metadata_Plate",
+    "Metadata_Well",
+    "Metadata_DeepProfiler_Experiment",
+    "Metadata_DeepProfiler_CellCount",
+    "Metadata_DeepProfiler_FieldCount"
+  ],
+  "top_feature_count": 50,
+  "top_variable_feature_names": [
+    "Cells_DeepProfiler_0111",
+    "Cells_DeepProfiler_0307",
+    "Cells_DeepProfiler_0333",
+    "Cells_DeepProfiler_0287",
+    "Cells_DeepProfiler_0497",
+    "Cells_DeepProfiler_0565",
+    "Cells_DeepProfiler_0119",
+    "Cells_DeepProfiler_0208",
+    "Cells_DeepProfiler_0505",
+    "Cells_DeepProfiler_0259"
+  ],
+  "pca_explained_variance_ratio": [
+    1.0,
+    7.797302505331809e-33
+  ],
+  "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\19-dp-summary\\pca_plot.png"
+}

@@ -1,0 +1,352 @@
+{
+  "started_at": "2026-10-28T18:53:29",
+  "tree": "D:\\release\\cellpainting-claw-v2",
+  "checks": {
+    "skills": {
+      "ok": true,
+      "passed": 19,
+      "total": 19,
+      "skills": {
+        "01": {
+          "ok": true,
+          "outputs": {
+            "data_access_summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\01-data-inspect\\data_access_summary.json"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "data-inspect-availability",
+          "elapsed_s": 11.12
+        },
+        "02": {
+          "ok": true,
+          "outputs": {
+            "download_plan_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\02-data-plan\\download_plan.json"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "data-plan-download",
+          "elapsed_s": 4.77
+        },
+        "03": {
+          "ok": true,
+          "outputs": {
+            "download_plan_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\03-data-download\\download_plan.json",
+            "download_output_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\03-data-download\\downloads",
+            "download_manifest_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\03-data-download\\downloads\\download_manifest.json"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "data-download",
+          "elapsed_s": 16.68
+        },
+        "04": {
+          "ok": true,
+          "outputs": {
+            "image_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Image.csv",
+            "cells_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Cells.csv",
+            "cytoplasm_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Cytoplasm.csv",
+            "nuclei_table_path": "D:\\release\\cellpainting-claw-v2\\demo\\backend\\profiling_backend\\outputs\\cellprofiler\\Nuclei.csv",
+            "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\profiling\\20261028T105402Z_profiling_run-official-cellprofiler.log"
+          },
+          "mode": "cellprofiler",
+          "error": null,
+          "skill": "cp-extract-measurements",
+          "elapsed_s": 37.1
+        },
+        "05": {
+          "ok": true,
+          "outputs": {
+            "single_cell_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\05-single-cell\\single_cell.csv.gz"
+          },
+          "mode": "explicit",
+          "error": null,
+          "skill": "cp-build-single-cell-table",
+          "elapsed_s": 0.69
+        },
+        "06": {
+          "ok": true,
+          "outputs": {
+            "aggregated_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\06-aggregate\\pycytominer\\aggregated.parquet"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cyto-aggregate-profiles",
+          "elapsed_s": 1.82
+        },
+        "07": {
+          "ok": true,
+          "outputs": {
+            "annotated_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\07-annotate\\pycytominer\\annotated.parquet"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cyto-annotate-profiles",
+          "elapsed_s": 0.47
+        },
+        "08": {
+          "ok": true,
+          "outputs": {
+            "normalized_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\08-normalize\\pycytominer\\normalized.parquet"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cyto-normalize-profiles",
+          "elapsed_s": 0.93
+        },
+        "09": {
+          "ok": true,
+          "outputs": {
+            "feature_selected_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\09-feature-select\\pycytominer\\feature_selected.parquet"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cyto-select-profile-features",
+          "elapsed_s": 0.89
+        },
+        "10": {
+          "ok": true,
+          "outputs": {
+            "summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\10-classical-summary\\profile_summary.json",
+            "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\10-classical-summary\\well_metadata_summary.csv",
+            "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\10-classical-summary\\top_variable_features.csv",
+            "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\10-classical-summary\\pca_coordinates.csv",
+            "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\10-classical-summary\\pca_plot.png"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cyto-summarize-classical-profiles",
+          "elapsed_s": 1.17
+        },
+        "11": {
+          "ok": true,
+          "outputs": {
+            "load_data_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\11-seg-prepare\\load_data_for_segmentation.csv"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cp-prepare-segmentation-inputs",
+          "elapsed_s": 0.06
+        },
+        "12": {
+          "ok": true,
+          "outputs": {
+            "load_data_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\load_data_for_segmentation.csv",
+            "pipeline_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\CPJUMP1_analysis_mask_export.cppipe",
+            "cellprofiler_output_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks",
+            "image_table_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\Image.csv",
+            "cells_table_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\Cells.csv",
+            "cytoplasm_table_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\Cytoplasm.csv",
+            "nuclei_table_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\Nuclei.csv",
+            "experiment_table_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\Experiment.csv",
+            "labels_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\labels",
+            "outlines_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\outlines",
+            "illumination_runtime_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\illumination_runtime",
+            "load_data_absolute_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\cellprofiler_masks\\load_data_for_segmentation.absolute.csv",
+            "workflow_config_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\segmentation_workflow_config.json",
+            "summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\12-seg-artifacts\\segmentation_summary.json",
+            "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\segmentation\\20261028T105445Z_segmentation_run-mask-export.log"
+          },
+          "mode": "cellprofiler",
+          "error": null,
+          "skill": "cp-extract-segmentation-artifacts",
+          "elapsed_s": 36.44
+        },
+        "13": {
+          "ok": true,
+          "outputs": {
+            "sample_previews_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\13-seg-previews\\sample_previews_png"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "cp-generate-segmentation-previews",
+          "elapsed_s": 0.04
+        },
+        "14": {
+          "ok": true,
+          "outputs": {
+            "crops_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\masked",
+            "image_stacks_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\masked\\image_stacks",
+            "cell_masks_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\masked\\cell_masks",
+            "nuclei_masks_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\masked\\nuclei_masks",
+            "manifest_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\masked\\single_cell_manifest.csv",
+            "source_config_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\14-crops\\segmentation_source_config.json"
+          },
+          "mode": "masked",
+          "error": null,
+          "skill": "crop-export-single-cell-crops",
+          "elapsed_s": 1.0
+        },
+        "15": {
+          "ok": true,
+          "outputs": {
+            "export_root": "D:\\release\\cellpainting-claw-v2\\verify\\run\\15-dp-export",
+            "export_manifest_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\15-dp-export\\manifest.json",
+            "field_metadata_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\15-dp-export\\images\\field_metadata.csv",
+            "locations_root": "D:\\release\\cellpainting-claw-v2\\verify\\run\\15-dp-export\\locations"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "dp-export-deep-feature-inputs",
+          "elapsed_s": 0.01
+        },
+        "16": {
+          "ok": true,
+          "outputs": {
+            "project_root": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project",
+            "project_manifest_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\project_manifest.json",
+            "config_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\inputs\\config\\profile_config.json",
+            "metadata_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\inputs\\metadata\\index.csv",
+            "locations_root": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\inputs\\locations"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "dp-build-deep-feature-project",
+          "elapsed_s": 0.03
+        },
+        "17": {
+          "ok": true,
+          "outputs": {
+            "project_root": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project",
+            "feature_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\outputs\\cell_painting_cnn_demo\\features",
+            "checkpoint_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\16-dp-project\\outputs\\cell_painting_cnn_demo\\checkpoint",
+            "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\deepprofiler\\20261028T105537Z_deepprofiler_profile.log"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "dp-run-deep-feature-model",
+          "elapsed_s": 27.47
+        },
+        "18": {
+          "ok": true,
+          "outputs": {
+            "single_cell_parquet_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_single_cell.parquet",
+            "single_cell_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_single_cell.csv.gz",
+            "well_aggregated_parquet_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_well_aggregated.parquet",
+            "well_aggregated_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_well_aggregated.csv.gz",
+            "field_summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_field_summary.csv",
+            "feature_manifest_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\18-dp-collect\\deepprofiler_feature_manifest.json"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "dp-collect-deep-features",
+          "elapsed_s": 0.21
+        },
+        "19": {
+          "ok": true,
+          "outputs": {
+            "summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\19-dp-summary\\profile_summary.json",
+            "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\19-dp-summary\\well_metadata_summary.csv",
+            "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\19-dp-summary\\top_variable_features.csv",
+            "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\19-dp-summary\\pca_coordinates.csv",
+            "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\verify\\run\\19-dp-summary\\pca_plot.png"
+          },
+          "mode": null,
+          "error": null,
+          "skill": "dp-summarize-deep-features",
+          "elapsed_s": 0.33
+        }
+      }
+    },
+    "embeddings": {
+      "ok": true,
+      "passed": 7,
+      "total": 7,
+      "profile": "v3",
+      "methods": {
+        "deepprofiler": {
+          "ok": true,
+          "shape": [
+            8,
+            672
+          ],
+          "expected_dim": 672,
+          "provenance": "official",
+          "elapsed_s": 11.43,
+          "error": null
+        },
+        "ca_mae": {
+          "ok": true,
+          "shape": [
+            8,
+            384
+          ],
+          "expected_dim": 384,
+          "provenance": "official",
+          "elapsed_s": 14.22,
+          "error": null
+        },
+        "cellclip": {
+          "ok": true,
+          "shape": [
+            8,
+            512
+          ],
+          "expected_dim": 512,
+          "provenance": "official",
+          "elapsed_s": 4.63,
+          "error": null
+        },
+        "o2vae": {
+          "ok": true,
+          "shape": [
+            8,
+            512
+          ],
+          "expected_dim": 512,
+          "provenance": "official",
+          "elapsed_s": 2.79,
+          "error": null
+        },
+        "unidino": {
+          "ok": true,
+          "shape": [
+            8,
+            1920
+          ],
+          "expected_dim": 1920,
+          "provenance": "surrogate",
+          "elapsed_s": 0.58,
+          "error": null
+        },
+        "dinocells": {
+          "ok": true,
+          "shape": [
+            8,
+            384
+          ],
+          "expected_dim": 384,
+          "provenance": "surrogate",
+          "elapsed_s": 0.22,
+          "error": null
+        },
+        "morphogenie": {
+          "ok": true,
+          "shape": [
+            8,
+            10
+          ],
+          "expected_dim": 10,
+          "provenance": "surrogate",
+          "elapsed_s": 0.04,
+          "error": null
+        }
+      }
+    },
+    "benchmark": {
+      "ok": true,
+      "methods": [
+        "ca_mae",
+        "cellclip",
+        "deepprofiler",
+        "dinocells",
+        "morphogenie",
+        "o2vae",
+        "unidino"
+      ],
+      "errors": {},
+      "output_dir": "D:\\release\\cellpainting-claw-v2\\verify\\run\\benchmark",
+      "elapsed_s": 34.95
+    }
+  },
+  "ok": true
+}

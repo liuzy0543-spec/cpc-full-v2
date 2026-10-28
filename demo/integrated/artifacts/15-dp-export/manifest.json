@@ -1,0 +1,24 @@
+{
+  "project_name": "cellpainting_claw_demo",
+  "source_label": "workflow-local-mask-export",
+  "source_load_data_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+  "source_image_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Image.csv",
+  "source_nuclei_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks\\Nuclei.csv",
+  "field_metadata_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\images\\field_metadata.csv",
+  "locations_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\15-dp-export\\locations",
+  "channels": [
+    "dna",
+    "rna",
+    "er",
+    "agp",
+    "mito"
+  ],
+  "field_count": 2,
+  "location_file_count": 2,
+  "total_nuclei": 4,
+  "notes": [
+    "This export packages field-level metadata and per-field nuclei locations.",
+    "Raw image paths follow the current source provenance; no image copies are made.",
+    "This export can now target either the default segmentation backend outputs or a workflow-local CellProfiler result directory."
+  ]
+}

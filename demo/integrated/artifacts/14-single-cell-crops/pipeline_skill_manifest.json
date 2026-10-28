@@ -1,0 +1,50 @@
+{
+  "implementation": "cellpaint_pipeline.segmentation_native",
+  "generated_utc": "2026-10-28T11:32:33Z",
+  "skill": {
+    "key": "crop-export-single-cell-crops",
+    "description": "Export single-cell image stacks from a segmentation workflow root in masked or unmasked mode.",
+    "category": "segmentation",
+    "input_keys": [
+      "workflow_root",
+      "output_dir",
+      "workers",
+      "crop_mode"
+    ],
+    "typical_outputs": [
+      "masked/ or unmasked/",
+      "image_stacks/",
+      "cell_masks/",
+      "nuclei_masks/",
+      "single_cell_manifest.csv"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.segmentation_native"
+    ],
+    "user_summary": "Use this skill when you want masked or unmasked single-cell crop stacks from a segmentation workflow root.",
+    "agent_summary": "Choose this skill when the request is to export single-cell crops and the only decision is masked versus unmasked mode.",
+    "composes_with": [
+      "dp-export-deep-feature-inputs"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops",
+  "primary_outputs": {
+    "crops_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked",
+    "image_stacks_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked\\image_stacks",
+    "cell_masks_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked\\cell_masks",
+    "nuclei_masks_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked\\nuclei_masks",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked\\single_cell_manifest.csv",
+    "source_config_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\segmentation_source_config.json"
+  },
+  "details": {
+    "mode": "masked",
+    "crops_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\14-single-cell-crops\\masked\\single_cell_manifest.csv",
+    "crop_count": 4,
+    "worker_count": 2,
+    "background_masked": true
+  },
+  "ok": true
+}

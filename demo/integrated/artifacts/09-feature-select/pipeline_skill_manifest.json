@@ -1,0 +1,37 @@
+{
+  "implementation": "cellpaint_pipeline.profiling_native",
+  "generated_utc": "2026-10-28T11:31:55Z",
+  "skill": {
+    "key": "cyto-select-profile-features",
+    "description": "Run the pycytominer path and return the feature-selected classical profile table.",
+    "category": "profiling",
+    "input_keys": [
+      "normalized_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "feature_selected.parquet"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.profiling_native",
+      "pycytominer"
+    ],
+    "user_summary": "Use this skill when you want the final feature-selected classical profile table.",
+    "agent_summary": "Choose this skill when the request is to produce the feature-selected pycytominer output.",
+    "composes_with": [
+      "cyto-summarize-classical-profiles"
+    ],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\09-feature-select",
+  "primary_outputs": {
+    "feature_selected_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\09-feature-select\\pycytominer\\feature_selected.parquet"
+  },
+  "details": {
+    "output_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\09-feature-select\\pycytominer\\feature_selected.parquet",
+    "row_count": 2,
+    "column_count": 1861
+  },
+  "ok": true
+}

@@ -1,0 +1,46 @@
+{
+  "project_name": "cellpainting_claw_demo_skill_mask_export",
+  "paths": {
+    "source_load_data_csv": "data/source_load_data.csv",
+    "load_data_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\load_data_for_segmentation.csv",
+    "base_pipeline": "../profiling_backend/cellprofiler/CPJUMP1_analysis_without_batchfile_406.cppipe",
+    "mask_export_pipeline": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\CPJUMP1_analysis_mask_export.cppipe",
+    "cellprofiler_output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\cellprofiler_masks",
+    "sample_previews_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\sample_previews_png",
+    "masked_crops_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\masked",
+    "masked_manifest_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\masked\\single_cell_manifest.csv",
+    "unmasked_crops_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\unmasked",
+    "unmasked_manifest_csv": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\unmasked\\single_cell_manifest.csv"
+  },
+  "subset": {
+    "plates": [
+      "BR00000001"
+    ],
+    "wells": [
+      "A01",
+      "A02"
+    ],
+    "sites": [
+      1
+    ]
+  },
+  "crop_extraction": {
+    "crop_size_pixels": 32,
+    "channel_order": [
+      "OrigMito",
+      "OrigAGP",
+      "OrigRNA",
+      "OrigER",
+      "OrigDNA",
+      "OrigBrightfield",
+      "OrigHighZBF",
+      "OrigLowZBF"
+    ]
+  },
+  "mask_export_runtime": {
+    "num_shards": 1,
+    "max_workers": 1,
+    "threads_per_worker": 1,
+    "work_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\12-segmentation\\.mask_export_sharded_work"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "implementation": "cellpaint_pipeline.adapters.deepprofiler_features",
+  "generated_utc": "2026-10-28T11:32:58Z",
+  "skill": {
+    "key": "dp-collect-deep-features",
+    "description": "Collect DeepProfiler outputs into single-cell and well-level tabular feature files.",
+    "category": "deepprofiler",
+    "input_keys": [
+      "project_root",
+      "output_dir",
+      "experiment_name"
+    ],
+    "typical_outputs": [
+      "deepprofiler_single_cell.parquet",
+      "deepprofiler_single_cell.csv.gz",
+      "deepprofiler_well_aggregated.parquet",
+      "deepprofiler_well_aggregated.csv.gz",
+      "deepprofiler_field_summary.csv",
+      "deepprofiler_feature_manifest.json"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.adapters.deepprofiler_features",
+      "pandas",
+      "pyarrow"
+    ],
+    "user_summary": "Use this skill when you want DeepProfiler feature files collected into analysis-ready tables.",
+    "agent_summary": "Choose this skill when the request is to convert raw DeepProfiler outputs into tabular features.",
+    "composes_with": [
+      "dp-summarize-deep-features"
+    ],
+    "status": "advanced",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect",
+  "primary_outputs": {
+    "single_cell_parquet_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.parquet",
+    "single_cell_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.csv.gz",
+    "well_aggregated_parquet_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.parquet",
+    "well_aggregated_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.csv.gz",
+    "field_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_field_summary.csv",
+    "feature_manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_feature_manifest.json"
+  },
+  "details": {
+    "project_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+    "feature_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\features",
+    "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_feature_manifest.json",
+    "single_cell_parquet_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.parquet",
+    "single_cell_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_single_cell.csv.gz",
+    "well_aggregated_parquet_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.parquet",
+    "well_aggregated_csv_gz_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_well_aggregated.csv.gz",
+    "field_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\18-dp-collect\\deepprofiler_field_summary.csv",
+    "experiment_name": "cell_painting_cnn_demo",
+    "field_file_count": 2,
+    "cell_count": 4,
+    "feature_count": 672,
+    "metadata_column_count": 46,
+    "well_count": 2
+  },
+  "ok": true
+}

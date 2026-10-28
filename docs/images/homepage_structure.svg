@@ -1,0 +1,60 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">CellPainting-Claw structure</title>
+  <desc id="desc">A three-part diagram with a clipped pyramid, aligned separators, and right-side explanatory bands.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .bandTop { fill: #f3ddd3; }
+      .bandMid { fill: #ece6f7; }
+      .bandBot { fill: #e7f4f4; }
+      .outline { fill: none; stroke: #c8bfdc; stroke-width: 3; }
+      .dividerTop { stroke: #c89e8d; stroke-width: 2.5; }
+      .dividerMid { stroke: #a59ac8; stroke-width: 2.5; }
+      .insideTop { font: 500 17px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #233042; }
+      .insideMid { font: 500 21px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #233042; }
+      .insideBot { font: 500 20px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #233042; }
+      .leftLabel { font: 500 24px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #5f6775; }
+      .rightTitle { font: 700 22px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #414854; }
+      .rightText { font: 500 18px "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #536071; }
+    </style>
+    <clipPath id="pyramidClip">
+      <path d="M520 112 L244 572 L796 572 Z" />
+    </clipPath>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760" />
+
+  <rect class="bandTop" x="520" y="112" width="630" height="136" />
+  <rect class="bandMid" x="520" y="248" width="630" height="132" />
+  <rect class="bandBot" x="520" y="380" width="630" height="192" />
+
+  <text class="leftLabel" x="108" y="188">Layer 3</text>
+  <text class="leftLabel" x="108" y="318">Layer 2</text>
+  <text class="leftLabel" x="108" y="506">Layer 1</text>
+
+  <g clip-path="url(#pyramidClip)">
+    <rect class="bandTop" x="200" y="112" width="760" height="136" />
+    <rect class="bandMid" x="200" y="248" width="760" height="132" />
+    <rect class="bandBot" x="200" y="380" width="760" height="192" />
+    <line class="dividerTop" x1="180" y1="248" x2="860" y2="248" />
+    <line class="dividerMid" x1="180" y1="380" x2="860" y2="380" />
+  </g>
+
+  <path class="outline" d="M520 112 L244 572 L796 572 Z" />
+
+  <text class="insideTop" x="520" y="212" text-anchor="middle">OpenClaw</text>
+  <text class="insideMid" x="520" y="318" text-anchor="middle">cellpainting_skills</text>
+  <text class="insideBot" x="520" y="494" text-anchor="middle">Foundation packages</text>
+
+  <text class="rightTitle" x="970" y="176" text-anchor="middle">Natural-language requests</text>
+  <text class="rightText" x="970" y="206" text-anchor="middle">Send natural-language requests</text>
+  <text class="rightText" x="970" y="234" text-anchor="middle">and receive results.</text>
+
+  <text class="rightTitle" x="970" y="304" text-anchor="middle">Skills</text>
+  <text class="rightText" x="970" y="334" text-anchor="middle">Run stable tasks directly,</text>
+  <text class="rightText" x="970" y="362" text-anchor="middle">or let an agent call them.</text>
+
+  <text class="rightTitle" x="995" y="476" text-anchor="middle">Core capabilities</text>
+  <text class="rightText" x="995" y="520" text-anchor="middle">Data access, classical profiling,</text>
+  <text class="rightText" x="995" y="548" text-anchor="middle">and deep feature extraction.</text>
+</svg>

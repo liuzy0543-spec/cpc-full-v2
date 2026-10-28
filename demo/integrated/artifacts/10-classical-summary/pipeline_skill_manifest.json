@@ -1,0 +1,57 @@
+{
+  "implementation": "cellpaint_pipeline.profile_summaries",
+  "generated_utc": "2026-10-28T11:31:56Z",
+  "skill": {
+    "key": "cyto-summarize-classical-profiles",
+    "description": "Summarize classical Cell Painting profile tables into readable metadata, variability, and PCA outputs.",
+    "category": "profiling",
+    "input_keys": [
+      "feature_selected_path",
+      "manifest_path",
+      "output_dir"
+    ],
+    "typical_outputs": [
+      "profile_summary.json",
+      "well_metadata_summary.csv",
+      "top_variable_features.csv",
+      "pca_coordinates.csv",
+      "pca_plot.png"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.profile_summaries",
+      "pandas",
+      "numpy"
+    ],
+    "user_summary": "Use this skill when you want a readable summary of classical profile outputs instead of raw tables only.",
+    "agent_summary": "Choose this skill when the request is to explain or summarize classical pycytominer outputs for a human reader.",
+    "composes_with": [],
+    "status": "primary",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary",
+  "primary_outputs": {
+    "summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\profile_summary.json",
+    "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\well_metadata_summary.csv",
+    "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\top_variable_features.csv",
+    "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\pca_coordinates.csv",
+    "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\pca_plot.png"
+  },
+  "details": {
+    "input_profile_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\09-feature-select\\pycytominer\\feature_selected.parquet",
+    "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary",
+    "summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\profile_summary.json",
+    "well_metadata_summary_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\well_metadata_summary.csv",
+    "top_variable_features_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\top_variable_features.csv",
+    "pca_coordinates_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\pca_coordinates.csv",
+    "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\pca_plot.png",
+    "row_count": 2,
+    "feature_count": 1855,
+    "metadata_column_count": 6,
+    "top_feature_count": 50,
+    "pca_explained_variance_ratio": [
+      1.0,
+      9.899067149901644e-34
+    ]
+  },
+  "ok": true
+}

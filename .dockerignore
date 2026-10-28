@@ -1,0 +1,15 @@
+.git
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+outputs/
+exports/
+cache/
+dist/
+integrations/openclaw/state/
+integrations/openclaw/autodl/state/
+integrations/openclaw/autodl/provider.env
+integrations/openclaw/docker/.env
+integrations/nanobot/*.db
+integrations/nanobot/*.log

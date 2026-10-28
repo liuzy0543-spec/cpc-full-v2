@@ -1,0 +1,62 @@
+{
+  "implementation": "cellpaint_pipeline.adapters.deepprofiler_project",
+  "generated_utc": "2026-10-28T11:32:58Z",
+  "skill": {
+    "key": "dp-run-deep-feature-model",
+    "description": "Run the DeepProfiler model against a prepared DeepProfiler project.",
+    "category": "deepprofiler",
+    "input_keys": [
+      "project_root",
+      "output_dir",
+      "experiment_name",
+      "config_filename",
+      "metadata_filename",
+      "gpu"
+    ],
+    "typical_outputs": [
+      "outputs/<experiment>/features/",
+      "deepprofiler_profile log"
+    ],
+    "implements_with": [
+      "cellpaint_pipeline.adapters.deepprofiler_project",
+      "DeepProfiler"
+    ],
+    "user_summary": "Use this skill when you want raw DeepProfiler feature files from a prepared project.",
+    "agent_summary": "Choose this skill when the request is to execute the deep feature model without collecting the tabular outputs yet.",
+    "composes_with": [
+      "dp-collect-deep-features"
+    ],
+    "status": "advanced",
+    "replaced_by": []
+  },
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\17-dp-run",
+  "primary_outputs": {
+    "project_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+    "feature_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\features",
+    "checkpoint_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\checkpoint",
+    "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\deepprofiler\\20261028T113246Z_deepprofiler_profile.log"
+  },
+  "details": {
+    "project_root": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+    "manifest_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\project_manifest.json",
+    "config_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\config\\profile_config.json",
+    "metadata_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\inputs\\metadata\\index.csv",
+    "experiment_name": "cell_painting_cnn_demo",
+    "feature_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\features",
+    "checkpoint_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\checkpoint",
+    "checkpoint_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project\\outputs\\cell_painting_cnn_demo\\checkpoint\\Cell_Painting_CNN_v1.hdf5",
+    "log_path": "D:\\release\\cellpainting-claw-v2\\demo\\workspace\\outputs\\logs\\deepprofiler\\20261028T113246Z_deepprofiler_profile.log",
+    "command": [
+      "E:\\MovedFromC\\miniconda3\\envs\\cellpainting-claw\\python.exe",
+      "-m",
+      "deepprofiler",
+      "--root=D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\16-dp-project",
+      "--config=profile_config.json",
+      "--metadata=index.csv",
+      "--exp=cell_painting_cnn_demo",
+      "profile"
+    ],
+    "returncode": 0
+  },
+  "ok": true
+}

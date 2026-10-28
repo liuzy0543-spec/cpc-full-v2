@@ -1,0 +1,170 @@
+{
+  "started_at": "2026-10-28T10:51:58.587359+00:00",
+  "finished_at": "2026-10-28T10:52:01.396124+00:00",
+  "output_dir": "demo/embeddings/benchmark",
+  "methods_requested": [
+    "deepprofiler",
+    "ca_mae",
+    "cellclip",
+    "o2vae",
+    "unidino",
+    "dinocells",
+    "morphogenie"
+  ],
+  "methods_run": [
+    "ca_mae",
+    "cellclip",
+    "deepprofiler",
+    "dinocells",
+    "morphogenie",
+    "o2vae",
+    "unidino"
+  ],
+  "errors": {},
+  "shapes": {
+    "deepprofiler": [
+      8,
+      672
+    ],
+    "ca_mae": [
+      8,
+      384
+    ],
+    "cellclip": [
+      8,
+      512
+    ],
+    "o2vae": [
+      8,
+      512
+    ],
+    "unidino": [
+      8,
+      1920
+    ],
+    "dinocells": [
+      8,
+      384
+    ],
+    "morphogenie": [
+      8,
+      10
+    ]
+  },
+  "stability": {},
+  "licence_gate": {
+    "deepprofiler": "permissive",
+    "ca_mae": "non-commercial",
+    "cellclip": "no-derivatives",
+    "o2vae": "permissive",
+    "unidino": "no-derivatives",
+    "dinocells": "unknown",
+    "morphogenie": "copyleft"
+  },
+  "licence_gate_legend": {
+    "permissive": "code and weights both permit redistribution and commercial use",
+    "non-commercial": "usable for research; commercial use restricted",
+    "no-derivatives": "redistribution of modified forms restricted",
+    "copyleft": "derivative works must carry the same licence",
+    "unknown": "upstream does not state terms; confirm before publishing"
+  },
+  "agreement_rv_coefficient": {
+    "ca_mae|cellclip": 0.5927741166089537,
+    "ca_mae|deepprofiler": 0.5498285113920696,
+    "ca_mae|dinocells": 0.3022548906155467,
+    "ca_mae|morphogenie": 0.25310806701212024,
+    "ca_mae|o2vae": 0.40918947646991904,
+    "ca_mae|unidino": 0.43248460965306373,
+    "cellclip|deepprofiler": 0.7739533500577107,
+    "cellclip|dinocells": 0.46127922270362987,
+    "cellclip|morphogenie": 0.31430327119544016,
+    "cellclip|o2vae": 0.5545772651993203,
+    "cellclip|unidino": 0.6489256426874485,
+    "deepprofiler|dinocells": 0.5041408538517691,
+    "deepprofiler|morphogenie": 0.2952356282874711,
+    "deepprofiler|o2vae": 0.6038784013092027,
+    "deepprofiler|unidino": 0.38200478137214267,
+    "dinocells|morphogenie": 0.23508213580573312,
+    "dinocells|o2vae": 0.2583099828102538,
+    "dinocells|unidino": 0.3309942926756625,
+    "morphogenie|o2vae": 0.07682524974684844,
+    "morphogenie|unidino": 0.09804819450439284,
+    "o2vae|unidino": 0.33489013079649954
+  },
+  "agreement_note": "RV coefficient of mean-centred embeddings: a 0..1 measure of whether two methods arrange the same cells similarly. It is defined across different widths, unlike a row-wise cosine. It is a sanity check, not a quality ranking.",
+  "aligned_row_count": 0,
+  "align_on": null,
+  "invariants": [
+    "every method reports weights_sha256, verified against the file",
+    "stochastic methods are repeated and their spread is recorded",
+    "all methods are aligned on one shared row identity before comparison"
+  ],
+  "provenance": {
+    "deepprofiler": {
+      "weights_sha256": "87b756f579336d606fd3d387b04bd2d422f9d410e5635a5d6b2cda7615833e73",
+      "weights_path": "E:\\cpc_weights\\deepprofiler\\Cell_Painting_CNN_v1.hdf5",
+      "license": "BSD-3-Clause (code) / CC-BY-4.0 (weights)",
+      "determinism": "deterministic",
+      "feature_layer": "block6a_activation",
+      "dim": 672
+    },
+    "ca_mae": {
+      "weights_sha256": "f6e5f1c97101331b1574c9e4b99623260191c55eea5d98e40460849c0e4c4d47",
+      "weights_path": "E:\\cpc_weights\\openphenom_pkg\\openphenom\\model.safetensors",
+      "license": "Recursion Non-Commercial EULA",
+      "determinism": "deterministic",
+      "feature_layer": "encoder_pool",
+      "dim": 384
+    },
+    "cellclip": {
+      "weights_sha256": "66c2d32a44a3e7d68deb489047df0df7676940308683b3285b1c8d28c471b550",
+      "weights_path": "E:\\cpc_weights\\cellclip\\model.safetensors",
+      "license": "CC BY-NC-ND 4.0",
+      "determinism": "deterministic",
+      "feature_layer": "CrossChannelFormer CLS",
+      "dim": 512
+    },
+    "o2vae": {
+      "weights_sha256": "aa70cfa8b080c9d9989c11de316a2f7f074e8bef29366c4aaec24c807c5dfc0f",
+      "weights_path": "E:\\cpc_weights\\o2vae\\o2vae_mefs_official.pt",
+      "license": "MIT",
+      "determinism": "deterministic",
+      "feature_layer": "z_mu",
+      "dim": 512
+    },
+    "unidino": {
+      "weights_sha256": "a0265184661d511e692603aefd5a20343adb1fc1545672a8c32bb95493ae9d55",
+      "weights_path": "E:\\cpc_weights\\unidino\\surrogate_unidino.pt",
+      "license": "BSD-3-Clause (code, README:108) / CC BY-NC 4.0 (weights, README:110; GitHub API reports CC-BY-NC-ND-4.0)",
+      "determinism": "deterministic",
+      "feature_layer": "teacher ViT-S CLS",
+      "dim": 1920
+    },
+    "dinocells": {
+      "weights_sha256": "5e172d8fed4876ff4951db92796eb8cc300163281c8cf7391d717801e7dc95e4",
+      "weights_path": "E:\\cpc_weights\\dinocells\\surrogate_dinocells.pt",
+      "license": "CC-BY-4.0 (weights) / no licence declared (code)",
+      "determinism": "deterministic",
+      "feature_layer": "CLS token",
+      "dim": 384
+    },
+    "morphogenie": {
+      "weights_sha256": "491029978fef0969ed7ed56abaaf189faf34f6abc936c13e1487e877d41dc86d",
+      "weights_path": "E:\\cpc_weights\\morphogenie\\surrogate_morphogenie.pt",
+      "license": "GPL-3.0",
+      "determinism": "deterministic",
+      "feature_layer": "latent (reparameterised sample -- see notes)",
+      "dim": 10
+    }
+  },
+  "written": [
+    "demo/embeddings/benchmark/embeddings/deepprofiler.npz",
+    "demo/embeddings/benchmark/embeddings/ca_mae.npz",
+    "demo/embeddings/benchmark/embeddings/cellclip.npz",
+    "demo/embeddings/benchmark/embeddings/o2vae.npz",
+    "demo/embeddings/benchmark/embeddings/unidino.npz",
+    "demo/embeddings/benchmark/embeddings/dinocells.npz",
+    "demo/embeddings/benchmark/embeddings/morphogenie.npz",
+    "demo/embeddings/benchmark/summary.json"
+  ]
+}

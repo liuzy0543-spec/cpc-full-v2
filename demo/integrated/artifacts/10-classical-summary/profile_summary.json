@@ -1,0 +1,34 @@
+{
+  "implementation": "cellpaint_pipeline.profile_summaries.classical",
+  "input_profile_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\09-feature-select\\pycytominer\\feature_selected.parquet",
+  "output_dir": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary",
+  "row_count": 2,
+  "feature_count": 1855,
+  "metadata_column_count": 6,
+  "metadata_columns": [
+    "Metadata_Plate",
+    "Metadata_Well",
+    "Metadata_Object_Count",
+    "Metadata_Treatment",
+    "Metadata_ControlType",
+    "Metadata_Batch"
+  ],
+  "top_feature_count": 50,
+  "top_variable_feature_names": [
+    "Cells_Texture_SumAverage_Brightfield_10_00_256",
+    "Cells_Texture_Contrast_HighZBF_10_03_256",
+    "Cells_Texture_InverseDifferenceMoment_LowZBF_5_01_256",
+    "Cells_Texture_Entropy_Brightfield_5_02_256",
+    "Cells_Texture_SumEntropy_LowZBF_3_03_256",
+    "Cells_Texture_Contrast_ER_3_02_256",
+    "Cells_Texture_Variance_HighZBF_5_03_256",
+    "Cells_Texture_InverseDifferenceMoment_ER_10_02_256",
+    "Cells_Granularity_5_ER",
+    "Cells_Texture_SumVariance_HighZBF_10_00_256"
+  ],
+  "pca_explained_variance_ratio": [
+    1.0,
+    9.899067149901644e-34
+  ],
+  "pca_plot_path": "D:\\release\\cellpainting-claw-v2\\demo\\integrated\\artifacts\\10-classical-summary\\pca_plot.png"
+}

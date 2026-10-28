@@ -1,0 +1,106 @@
+{
+  "project_name": "cellpainting_claw_demo_profiling_backend",
+  "paths": {
+    "raw_images_dir": "data/raw_core",
+    "metadata_dir": "data/metadata",
+    "manifest_csv": "data/metadata/image_manifest.csv",
+    "plate_map_csv": "data/metadata/plate_map.csv",
+    "cellprofiler_output_dir": "outputs/cellprofiler",
+    "image_table_csv": "outputs/cellprofiler/Image.csv",
+    "cells_table_csv": "outputs/cellprofiler/Cells.csv",
+    "nuclei_table_csv": "outputs/cellprofiler/Nuclei.csv",
+    "cytoplasm_table_csv": "outputs/cellprofiler/Cytoplasm.csv",
+    "single_cell_output_csv_gz": "outputs/pycytominer/single_cell.csv.gz",
+    "aggregated_output_parquet": "outputs/pycytominer/well_aggregated.parquet",
+    "annotated_output_parquet": "outputs/pycytominer/well_annotated.parquet",
+    "normalized_output_parquet": "outputs/pycytominer/well_normalized.parquet",
+    "feature_selected_output_parquet": "outputs/pycytominer/well_feature_selected.parquet",
+    "load_data_subset_csv": "data/metadata/load_data_with_illum.csv",
+    "load_data_with_illum_csv": "data/metadata/load_data_with_illum.csv",
+    "illum_output_dir": "outputs/cellprofiler/illumination",
+    "cellprofiler_pipeline_analysis": "cellprofiler/CPJUMP1_analysis_without_batchfile_406.cppipe",
+    "cellprofiler_pipeline_illumination": "cellprofiler/illum_without_batchfile.cppipe"
+  },
+  "raw_images": {
+    "layout": "cpjump1",
+    "valid_extensions": [
+      ".tif",
+      ".tiff"
+    ],
+    "filename_regex": "^r(?P<row>[0-9]{2})c(?P<column>[0-9]{2})f(?P<site>[0-9]{2})p[0-9]{2}-ch(?P<channel_number>[1-8])sk[0-9]+fk[0-9]+fl[0-9]+\\.(?P<ext>tif|tiff)$",
+    "plate_dir_regex": "^BR[0-9]+$",
+    "channel_map": {
+      "1": "Mito",
+      "2": "AGP",
+      "3": "RNA",
+      "4": "ER",
+      "5": "DNA",
+      "6": "BF1",
+      "7": "BF2",
+      "8": "BF3"
+    },
+    "fluorescent_channel_numbers": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "metadata": {
+    "required_manifest_columns": [
+      "Metadata_Plate",
+      "Metadata_Well",
+      "Metadata_Site",
+      "Metadata_Channel",
+      "FileName",
+      "FilePath"
+    ],
+    "required_plate_map_columns": [
+      "Metadata_Plate",
+      "Metadata_Well",
+      "Metadata_Treatment",
+      "Metadata_ControlType",
+      "Metadata_Batch"
+    ]
+  },
+  "cellprofiler": {
+    "image_join_key": "ImageNumber",
+    "object_join_key": "ObjectNumber",
+    "default_object_table": "Cells",
+    "metadata_columns_from_image": [
+      "ImageNumber",
+      "Metadata_Plate",
+      "Metadata_Well",
+      "Metadata_Site"
+    ]
+  },
+  "pycytominer": {
+    "aggregate": {
+      "strata": [
+        "Metadata_Plate",
+        "Metadata_Well"
+      ],
+      "operation": "median",
+      "compute_object_count": true,
+      "object_feature": "Metadata_ObjectNumber"
+    },
+    "annotate": {
+      "join_on_columns": [
+        "Metadata_Plate",
+        "Metadata_Well"
+      ]
+    },
+    "normalize": {
+      "method": "mad_robustize",
+      "samples": "Metadata_ControlType == 'negative_control'"
+    },
+    "feature_select": {
+      "operations": [
+        "variance_threshold"
+      ],
+      "na_cutoff": 0.05,
+      "corr_threshold": 0.9
+    }
+  }
+}
