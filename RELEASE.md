@@ -239,3 +239,19 @@ CellProfiler    C:\CellProfiler\CellProfiler.exe                                
 
 没有 CellProfiler 的机器上，04 退回捆绑测量表、12 退回内置原生分割，`mode` 会如实标注。
 
+## 12. benchmark 结论
+
+完整结果（3,857 细胞 / 54 化合物）见 [`demo/benchmarks/RESULTS.md`](demo/benchmarks/RESULTS.md)，
+排序（mAP_z，越高越好）：
+
+| 方法 | kNN | mAP_z | silhouette_z |
+|---|---|---|---|
+| `cellclip` | 0.6248 | 0.1337 | -0.0454 |
+| `ca_mae` | 0.4286 | 0.1083 | -0.1365 |
+| `deepprofiler` | 0.1960 | 0.0691 | -0.0341 |
+| `baseline_raw_pixels` | 0.1084 | 0.0508 | -0.0655 |
+| `baseline_random` | 0.0837 | 0.0450 | -0.0141 |
+
+要点：只有 `cellclip` / `ca_mae` 明显高于原始像素基线；`o2vae` 处在随机水平（核剪影喂给
+细胞剪影训练的权重，属域外推断）；所有方法的 silhouette 均为负，说明这批数据上不存在
+按化合物可分簇。替身方法的名次不代表其发表性能。

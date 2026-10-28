@@ -1,0 +1,154 @@
+{
+  "cells": 352,
+  "compounds": 13,
+  "mock_cells": 160,
+  "mock_wells": 8,
+  "chance_knn": 0.07692307692307693,
+  "metrics": {
+    "deepprofiler": {
+      "knn": 0.48579545454545453,
+      "map": 0.30192442637042466,
+      "knn_z": 0.48579545454545453,
+      "map_z": 0.2986640116589028,
+      "sil": -0.028823879157101797,
+      "sil_z": -0.020645460965696635,
+      "auc_z": 0.6862630208333333,
+      "rank": 26.9529274211625,
+      "top1_var": 0.1254515886209785,
+      "top3_var": 0.25729673789991475
+    },
+    "ca_mae": {
+      "knn": 0.5284090909090909,
+      "map": 0.30419369590305617,
+      "knn_z": 0.5454545454545454,
+      "map_z": 0.3119725931350228,
+      "sil": -0.15754945135412285,
+      "sil_z": -0.08725805252615798,
+      "auc_z": 0.651171875,
+      "rank": 1.9218803089535441,
+      "top1_var": 0.7174026035085501,
+      "top3_var": 0.8030893162902288
+    },
+    "cellclip": {
+      "knn": 0.5767045454545454,
+      "map": 0.34040195404259405,
+      "knn_z": 0.5823863636363636,
+      "map_z": 0.3410762054625051,
+      "sil": -0.03943824031460779,
+      "sil_z": -0.03363863158129322,
+      "auc_z": 0.65576171875,
+      "rank": 21.443748538576237,
+      "top1_var": 0.13196975227676164,
+      "top3_var": 0.3075276440873294
+    },
+    "o2vae": {
+      "knn": 0.41761363636363635,
+      "map": 0.2583578879919674,
+      "knn_z": 0.42613636363636365,
+      "map_z": 0.25683730607385935,
+      "sil": -0.10593225694430618,
+      "sil_z": -0.09510421647512288,
+      "auc_z": 0.5877278645833333,
+      "rank": 3.0247209186643,
+      "top1_var": 0.5523559877728706,
+      "top3_var": 0.7477258101375278
+    },
+    "unidino": {
+      "knn": 0.45738636363636365,
+      "map": 0.2725647922018204,
+      "knn_z": 0.45170454545454547,
+      "map_z": 0.27274093041005115,
+      "sil": -0.15884934511045418,
+      "sil_z": -0.13650824273070788,
+      "auc_z": 0.5258138020833334,
+      "rank": 2.6433868840218633,
+      "top1_var": 0.5398248771929548,
+      "top3_var": 0.8746662883972091
+    },
+    "dinocells": {
+      "knn": 0.39204545454545453,
+      "map": 0.24539844420887116,
+      "knn_z": 0.4090909090909091,
+      "map_z": 0.24536351091751893,
+      "sil": -0.1465076635752256,
+      "sil_z": -0.1304543155727763,
+      "auc_z": 0.5804361979166666,
+      "rank": 3.3934230590249728,
+      "top1_var": 0.42803020597358626,
+      "top3_var": 0.8815880931381206
+    },
+    "morphogenie": {
+      "knn": 0.4318181818181818,
+      "map": 0.2661205120609822,
+      "knn_z": 0.4119318181818182,
+      "map_z": 0.2654473130151627,
+      "sil": -0.595092244883979,
+      "sil_z": -0.5814643791432796,
+      "auc_z": 0.44222005208333337,
+      "rank": 1.0003054109477303,
+      "top1_var": 0.9998473195666038,
+      "top3_var": 0.9999994187800931
+    },
+    "baseline_raw_pixels": {
+      "knn": 0.4375,
+      "map": 0.2609678516603211,
+      "knn_z": 0.4403409090909091,
+      "map_z": 0.2615998531171643,
+      "sil": -0.048695134294160496,
+      "sil_z": -0.04831789484879676,
+      "auc_z": 0.5779622395833333,
+      "rank": 15.54049101899318,
+      "top1_var": 0.16587902486206443,
+      "top3_var": 0.37903622449772295
+    },
+    "baseline_random": {
+      "knn": 0.39488636363636365,
+      "map": 0.23898366072838206,
+      "knn_z": 0.39204545454545453,
+      "map_z": 0.23916253123471032,
+      "sil": -0.010896039565585406,
+      "sil_z": -0.010845417797846682,
+      "auc_z": 0.49283854166666663,
+      "rank": 182.6939142796135,
+      "top1_var": 0.01055709399083881,
+      "top3_var": 0.031065135723179614
+    }
+  },
+  "ranking_by_map_z": [
+    "cellclip",
+    "ca_mae",
+    "deepprofiler",
+    "unidino",
+    "morphogenie",
+    "o2vae",
+    "dinocells"
+  ],
+  "profile": "v3",
+  "weights_provenance": {
+    "deepprofiler": "official",
+    "ca_mae": "official",
+    "cellclip": "official",
+    "o2vae": "official",
+    "unidino": "surrogate",
+    "dinocells": "surrogate",
+    "morphogenie": "surrogate"
+  },
+  "surrogates": [
+    "dinocells",
+    "morphogenie",
+    "unidino"
+  ],
+  "baselines": [
+    "baseline_raw_pixels",
+    "baseline_random"
+  ],
+  "caveats": [
+    "one well per compound: well/field appearance is confounded with chemistry",
+    "absolute scores are inflated for every method; the comparison against baseline_raw_pixels is what is interpretable",
+    "one concentration per compound, so no dose-response is possible",
+    "O2-VAE consumes a nucleus silhouette, not 5-channel intensity",
+    "O2-VAE's official checkpoint was trained on CELL silhouettes (configs/config_mefs.py:19 -> data/mefs/scaled/cell) and no nucleus checkpoint is published, so feeding it a nucleus silhouette is OUT-OF-DOMAIN inference: the embedding distribution does not match the training distribution, and the number should not be read as the method's performance",
+    "mock AUC is cross-validated over the 4 mock wells to avoid centroid self-inclusion bias",
+    "rows marked SURROGATE use locally trained stand-in weights, not the authors'; their scores are an interface check, never a method result"
+  ]
+}

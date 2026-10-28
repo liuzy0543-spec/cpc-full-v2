@@ -77,3 +77,7 @@ result = bench.run_benchmark(plan, inputs, sample_metadata={'row_ids': ids})
 | 输出维度 | deepprofiler=672、ca_mae=384、cellclip=512、o2vae=512、unidino=1920、dinocells=384、morphogenie=10 |
 | benchmark 错误数 | 0 |
 | 单方法耗时 | 见 `report.json`（CPU） |
+
+## 想看真正的分数
+
+这里的 8 个细胞只验证链路。方法排序、与基线（原始像素 / 随机）的差、以及不能信的指标，见 [`../benchmarks/RESULTS.md`](../benchmarks/RESULTS.md)。
